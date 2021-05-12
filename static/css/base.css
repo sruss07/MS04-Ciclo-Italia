@@ -1,0 +1,14 @@
+html {
+    height: 100%;
+}
+
+body {
+    color: lightgray;
+    font-family: 'Barlow';
+}
+
+.jumbotron {
+    background: url() no-repeat center center fixed;
+    background-size: cover;
+
+}
