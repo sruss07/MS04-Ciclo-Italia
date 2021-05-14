@@ -1,3 +1,4 @@
+
 html {
     height: 100%;
 }
@@ -8,9 +9,9 @@ body {
 }
 
 .jumbotron {
-    background: url() no-repeat center center fixed;
+    background: url('/media/jumbotron_image.jpg') no-repeat center center fixed;
     background-size: cover;
-
+    height: 100%;
 }
 
 /* from Bulma */
@@ -28,4 +29,20 @@ body {
 
 .site-logo-link {
     width: fit-content;
+}
+
+.text-green {
+    color: #09A56A !important;
+}
+
+.text-red {
+    color: #F12E3C !important;
+}
+
+.border-green {
+    border: 1px solid #09A56A !important;
+}
+
+.bg-white {
+    background: #EAE7EE !important;
 }
