@@ -8,7 +8,44 @@ body {
     font-family: 'Barlow';
 }
 
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 /* Home Page */
+
+/* Home Page Nav Bar */
+
+.site-logo-font {
+    text-transform: uppercase;
+}
+
+.site-logo-link {
+    width: fit-content;
+}
+
+.text-green {
+    color: #198754 !important;
+}
+
+.text-red {
+    color: #DC3545 !important;
+}
+
+.border-green {
+    border: 1px solid #198754 !important;
+}
+
+.bg-white {
+    background: #EAE7EE !important;
+}
+
+/* Home Page Jumbotron*/
 
 .jumbotron {
     background: url('/media/jumbotron_image.jpg') no-repeat center center fixed;
@@ -24,41 +61,15 @@ body {
       font-size: 4rem;
   }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.site-logo-font {
-    text-transform: uppercase;
-}
-
-.site-logo-link {
-    width: fit-content;
-}
-
-.text-green {
-    color: #09A56A !important;
-}
-
-.text-red {
-    color: #F12E3C !important;
-}
-
-.border-green {
-    border: 1px solid #09A56A !important;
-}
-
-.bg-white {
-    background: #EAE7EE !important;
-}
+/* Home Page Cards */
 
 .card-title {
     font-size: 2rem;
     font-weight: 500;
     color: #000;
+}
+
+.card {
+    margin: 10px;
+    width: 30%;
 }
