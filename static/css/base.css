@@ -8,11 +8,21 @@ body {
     font-family: 'Barlow';
 }
 
+/* Home Page */
+
 .jumbotron {
     background: url('/media/jumbotron_image.jpg') no-repeat center center fixed;
+    padding-top: 20%;
+    padding-bottom: 20%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
-    height: 100%;
-}
+    -o-background-size: cover;
+  }
+
+  .jumbotron-text {
+      font-size: 4rem;
+  }
 
 /* from Bulma */
 .icon {
@@ -45,4 +55,10 @@ body {
 
 .bg-white {
     background: #EAE7EE !important;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000;
 }
