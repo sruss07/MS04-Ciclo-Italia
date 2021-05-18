@@ -92,6 +92,10 @@ body {
     padding-right: 8px;
 }
 
+.card-group a {
+    align-items: center;
+}
+
 .card-title {
     font-size: 2rem;
     font-weight: 500;
