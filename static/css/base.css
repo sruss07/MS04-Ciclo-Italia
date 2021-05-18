@@ -53,7 +53,7 @@ body {
 }
 
 .bg-white {
-    background: #fdfffa !important;
+    background: #F8F8FF !important;
 }
 
 /* Home Page Jumbotron*/
@@ -108,7 +108,7 @@ body {
 
 footer {
     height: 4rem;
-    background-color: #fdfffa;
+    background-color: #F8F8FF;
     display: flex;
     margin:-80px auto 0;
     position: fixed;
@@ -141,7 +141,7 @@ footer {
     font-size: 1.5rem;
     margin: 5px;
     padding: 5px;
-    color: white;
+    color: #F8F8FF;
 }
 
 .social i:hover {
