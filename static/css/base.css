@@ -92,10 +92,6 @@ body {
     padding-right: 8px;
 }
 
-.card-group a {
-    align-items: center;
-}
-
 .card-title {
     font-size: 2rem;
     font-weight: 500;
@@ -150,4 +146,16 @@ footer {
 
 .social i:hover {
     transform: scale(1.2);
+}
+
+.brand-1 {
+    background-color: red;
+}
+
+.brand-2 {
+    background-color: blue;
+}
+
+.brand-3 {
+    background-color: green;
 }
