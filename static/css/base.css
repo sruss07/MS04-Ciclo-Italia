@@ -84,28 +84,17 @@ body {
       font-size: 4rem;
   }
 
-/* Home Page Cards */
+/* Home Page Brands */
 
-.card-group {
-    display: flex;
+.brand-container {
     justify-content: center;
     align-items: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-.card-title {
-    font-size: 2rem;
-    font-weight: 500;
-    color: #000;
-}
-
-.card {
-    padding-left: 8px;
-    padding-right: 8px;
     border: 1px solid #198754;
+}
+
+.brand-container img {
+    width: 100%;
+    height: auto;
 }
 
 /* --- Home Page Footer --- */
@@ -150,16 +139,4 @@ footer {
 
 .social i:hover {
     transform: scale(1.2);
-}
-
-.brand-1 {
-    background-color: red;
-}
-
-.brand-2 {
-    background-color: blue;
-}
-
-.brand-3 {
-    background-color: green;
 }
