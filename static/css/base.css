@@ -55,6 +55,10 @@ body {
 .bg-white {
     background: #F8F8FF !important;
 }
+  
+.my-link:hover {
+    transform: scale(1.2);
+}
 
 /* Home Page Jumbotron*/
 

@@ -39,78 +39,83 @@
   </head>
   <body>
 
-    <header class="fixed-top">
-        <!--Bootstrap Navigation menu-->
-        <nav class="navbar navbar-dark navbar-expand-xl nav-color md-font" id="testcolor">
-            <a class="navbar-brand" id="logo" href="{% url 'home' %}">Ciclo Italia</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Brands</a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            <a href="" class="dropdown-item">Bianchi</a>
-                            <a href="" class="dropdown-item">Cinelli</a>
-                            <a href="" class="dropdown-item">Colnago</a>
-                            <a href="" class="dropdown-item">De Rosa</a>
-                            <a href="" class="dropdown-item">Pinarello</a>
-                            <a href="" class="dropdown-item">Wilier</a>    
+    
+    
+    <header class="container-fluid fixed-top">
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+              <a href="{% url 'home' %}" class="nav-link site-logo-link">
+                  <h2 class="site-logo-font text-green my-0">Ciclo Italia</h2>
+              </a>
+          </div>
+          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+              <form method="GET" action="">
+                  <div class="input-group w-100">
+                      <input class="form-control border border-red rounded-0" type="text" name="q" placeholder="Find your dream bike">
+                      <div class="input-group-append">
+                          <button class="form-control btn btn-red border border-red rounded-0" type="submit">
+                              <span class="text-red icon">
+                                  <i class="fas fa-search fa-lg"></i>
+                              </span>
+                          </button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+              <ul class="list-inline list-unstyled text-red text-center text-lg-right my-0">
+                <li class="list-inline-item dropdown">
+                    <a class="text-green nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="my-link text-center">
+                            <div><i class="fas fa-biking fa-lg"></i></div>
+                            <p class="my-0">Brands</p>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Reviews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Blog</a>
-                    </li>
-                    {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Logout</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">My Profile</a>
-                    </li>
-                    {% else %}
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link underline-transition" href="">Signup</a>
-                    </li>
-                    {% endif %}
-                </ul>
-                <div class="nav-item cart">
-                    <a class="nav-link" href="">
-                        <i class="fas fa-shopping-cart lg-font"></i>
-                        {% if bike_count %}
-                        <span class="cart-icon-quantity">{{ bike_count }}</span>
-                        {% endif %}
                     </a>
-                </div>
-                <div>
-                    <form class="form-inline my-2 my-lg-0 justify-content-center nav-search" method="GET" action="">
-                        {% csrf_token %}
-                        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="sm-font my-2 my-sm-0 search-form-button" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-        <hr class="navbar-separator">
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <a href="" class="dropdown-item">Bianchi</a>
+                        <a href="" class="dropdown-item">Cinelli</a>
+                        <a href="" class="dropdown-item">Colnago</a>
+                        <a href="" class="dropdown-item">De Rosa</a>
+                        <a href="" class="dropdown-item">Pinarello</a>
+                        <a href="" class="dropdown-item">Wilier</a>    
+                    </div>
+                </li>
+
+                <li class="list-inline-item dropdown">
+                    <a class="text-red nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="my-link text-center">
+                            <div><i class="fas fa-pound-sign fa-lg"></i></div>
+                            <p class="my-0">Offers</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <a href="" class="dropdown-item">New Arrivals</a>
+                        <a href="" class="dropdown-item">Latest Deals</a>
+                        <a href="" class="dropdown-item">Clearance Bikes</a>   
+                    </div>
+                </li>
+
+                <li class="list-inline-item dropdown">
+                    <a class="text-green nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="my-link text-center">
+                            <div><i class="fas fa-comment-dots fa-lg"></i></div>
+                            <p class="my-0">Reviews</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="list-inline-item dropdown">
+                    <a class="text-red nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="my-link text-center">
+                            <div><i class="fas fa-blog fa-lg"></i></div>
+                            <p class="my-0">Blog</p>
+                        </div>
+                    </a>
+                </li>
 
                   <li class="list-inline-item dropdown">
-                      <a class="text-red nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <div class="text-center">
+                      <a class="text-green nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <div class="my-link text-center">
                               <div><i class="fas fa-user fa-lg"></i></div>
                               <p class="my-0">My Account</p>
                           </div>
@@ -129,8 +134,8 @@
                       </div>
                   </li>
                   <li class="list-inline-item">
-                      <a class="{% if grand_total %}text-green text-info font-weight-bold{% else %}text-green{% endif %} nav-link" href="">
-                          <div class="text-center">
+                      <a class="{% if grand_total %}text-red text-info font-weight-bold{% else %}text-red{% endif %} nav-link" href="">
+                          <div class="my-link text-center">
                               <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                               <p class="my-0">
                                   {% if grand_total %}
