@@ -51,7 +51,7 @@
           <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
               <form method="GET" action="">
                   <div class="input-group w-100">
-                      <input class="form-control border border-red rounded-0" type="text" name="q" placeholder="Find your dream bike">
+                      <input class="form-control border border-red rounded-0" type="text" name="q" placeholder="Search for your dream bike">
                       <div class="input-group-append">
                           <button class="form-control btn btn-red border border-red rounded-0" type="submit">
                               <span class="text-red icon">
@@ -72,12 +72,12 @@
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        <a href="" class="dropdown-item">Bianchi</a>
-                        <a href="" class="dropdown-item">Cinelli</a>
-                        <a href="" class="dropdown-item">Colnago</a>
-                        <a href="" class="dropdown-item">De Rosa</a>
-                        <a href="" class="dropdown-item">Pinarello</a>
-                        <a href="" class="dropdown-item">Wilier</a>    
+                        <a href="" class="dropdown-item text-green">Bianchi</a>
+                        <a href="" class="dropdown-item text-green">Cinelli</a>
+                        <a href="" class="dropdown-item text-green">Colnago</a>
+                        <a href="" class="dropdown-item text-green">De Rosa</a>
+                        <a href="" class="dropdown-item text-green">Pinarello</a>
+                        <a href="" class="dropdown-item text-green">Wilier</a>    
                     </div>
                 </li>
 
@@ -89,9 +89,9 @@
                         </div>
                     </a>
                     <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        <a href="" class="dropdown-item">New Arrivals</a>
-                        <a href="" class="dropdown-item">Latest Deals</a>
-                        <a href="" class="dropdown-item">Clearance Bikes</a>   
+                        <a href="" class="dropdown-item text-red">New Arrivals</a>
+                        <a href="" class="dropdown-item text-red">Latest Deals</a>
+                        <a href="" class="dropdown-item text-red">Clearance Bikes</a>   
                     </div>
                 </li>
 
@@ -123,13 +123,13 @@
                       <div class="dropdown-menu border-0" aria-labelledby="user-options">
                           {% if request.user.is_authenticated %}
                               {% if request.user.is_superuser %}
-                                  <a href="" class="dropdown-item">Product Management</a>
+                                  <a href="" class="dropdown-item text-green">Product Management</a>
                               {% endif %}
-                              <a href="" class="dropdown-item">My Profile</a>
-                              <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                              <a href="" class="dropdown-item text-green">My Profile</a>
+                              <a href="{% url 'account_logout' %}" class="dropdown-item text-green">Logout</a>
                           {% else %}
-                              <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                              <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                              <a href="{% url 'account_signup' %}" class="dropdown-item text-green">Register</a>
+                              <a href="{% url 'account_login' %}" class="dropdown-item text-green">Login</a>
                           {% endif %}
                       </div>
                   </li>
