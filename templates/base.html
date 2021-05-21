@@ -42,7 +42,6 @@
 
 <body>
     <header>
-
         <!-- Navbar -->
         <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
             <div class="navbar">
@@ -64,7 +63,7 @@
                             </div>
                         </a>
                     </li>
-                    <!-- profile  -->
+                    <!-- profile icon -->
                     <li class="list-inline-item">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
@@ -76,21 +75,22 @@
                         <div class="dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
-                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
+                                    <a href="" class="dropdown-item">Product Management</a>
+                                    <a href="" class="dropdown-item">Reviews Management</a>
+                                    <a href="" class="dropdown-item">Blog Management</a>
                                     <div class="hr-dark"></div>
                                 {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                    <a href="" class="dropdown-item">My Profile</a>
+                                    <a href="" class="dropdown-item">Logout</a>
                                 {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    <a href="" class="dropdown-item">Register</a>
+                                    <a href="" class="dropdown-item">Login</a>
                             {% endif %}
                         </div>
                     </li>
-                    <!-- Donation cart  -->
+                    <!-- Shopping cart  -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="{% url 'view_cart' %}">
+                        <a class="nav-link" href="">
                             <div class="text-center">
                                 <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
@@ -107,9 +107,6 @@
                 {% include 'includes/mobile_nav.html' %}
             </div>
         </nav>
-        
-        {% include 'includes/main-nav.html' %}
-
     </header>
 
   {% if messages %}
