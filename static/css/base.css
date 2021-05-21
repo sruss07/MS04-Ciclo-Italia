@@ -23,7 +23,7 @@ body {
 
 /* Home Page Nav Bar */
 
-#site-logo {
+.site-logo {
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 900;
