@@ -42,6 +42,9 @@
 
 <body>
     <header>
+
+
+        
         <!-- Navbar -->
         <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
             <div class="navbar">
@@ -57,7 +60,7 @@
                 <div class="nav-icons col-8 col-sm-9 col-lg-4 col-xl-3 d-flex align-items-center justify-content-end">
                     <!-- search icon -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="#navSearchCollapse" data-toggle="collapse">
+                        <a class="nav-link text-red" href="#navSearchCollapse" data-toggle="collapse">
                             <div class="text-center">
                                 <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-search fa-lg" aria-hidden="true"></i>
@@ -66,7 +69,7 @@
                     </li>
                     <!-- profile icon -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                        <a class="nav-link text-green" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="text-center">
                                 <i class="fas fa-user d-lg-none" aria-hidden="true"></i>
@@ -76,22 +79,22 @@
                         <div class="dropdown-menu" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Product Management</a>
-                                    <a href="" class="dropdown-item">Reviews Management</a>
-                                    <a href="" class="dropdown-item">Blog Management</a>
+                                    <a href="" class="dropdown-item text-green">Product Management</a>
+                                    <a href="" class="dropdown-item text-green">Reviews Management</a>
+                                    <a href="" class="dropdown-item text-green">Blog Management</a>
                                     <div class="hr-dark"></div>
                                 {% endif %}
-                                    <a href="" class="dropdown-item">My Profile</a>
-                                    <a href="" class="dropdown-item">Logout</a>
+                                    <a href="" class="dropdown-item text-green">My Profile</a>
+                                    <a href="" class="dropdown-item text-green">Logout</a>
                                 {% else %}
-                                    <a href="" class="dropdown-item">Register</a>
-                                    <a href="" class="dropdown-item">Login</a>
+                                    <a href="" class="dropdown-item text-green">Register</a>
+                                    <a href="" class="dropdown-item text-green">Login</a>
                             {% endif %}
                         </div>
                     </li>
                     <!-- Shopping cart  -->
                     <li class="list-inline-item">
-                        <a class="nav-link" href="">
+                        <a class="nav-link text-red" href="">
                             <div class="text-center">
                                 <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
                                 <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>

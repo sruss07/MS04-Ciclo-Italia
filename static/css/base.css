@@ -19,6 +19,10 @@ body {
     width: 1.5rem;
 }
 
+/* --- Navbar --- */
+
+
+
 /* Home Page */
 
 /* Home Page Nav Bar */
@@ -40,6 +44,39 @@ body {
 #user-options {
     margin-left: 30px;
     margin-right: 30px;
+}
+
+#navBar {
+    font-weight: 400;
+    font-size: 1.1rem;
+    background-color: #fdfffa;
+    top: 0;
+    width: 100vw;
+    height: 85px;
+}
+
+.nav-item {
+    margin-right: 12px;
+}
+
+.dropdown-menu {
+    background-color: #fdfffa;
+    left: auto;
+    padding: 1rem;
+    width: 100px;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+#cartCount {
+    position: absolute;
+    top: 2px;
+    font-size: 10px;
+    margin-left: -5px;
+    border-radius: 10px;
 }
 
 .navbar-toggler-icon {
