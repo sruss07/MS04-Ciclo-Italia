@@ -41,8 +41,72 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top text-center">
+    <header>
 
+        <!-- Navbar -->
+        <nav id="navBar" class="navbar-expand-lg navbar-light p-0">
+            <div class="navbar">
+                <!-- Nav brand -->
+                <div class="col-2 col-lg-3 col-xl-2 p-0">
+                    <a class="navbar-brand m-0 p-2" href="{% url 'home' %}">
+                    </a>
+                </div>
+                <!-- desktop nav -->
+                {% include 'includes/main-nav.html' %}
+                <!-- Main nav icons -->
+                <div class="nav-icons col-8 col-sm-9 col-lg-4 col-xl-3 d-flex align-items-center justify-content-end">
+                    <!-- search icon -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="#navSearchCollapse" data-toggle="collapse">
+                            <div class="text-center">
+                                <i class="fas fa-search d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-search fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- profile  -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="text-center">
+                                <i class="fas fa-user d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-user fa-lg" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_project' %}" class="dropdown-item">Project Management</a>
+                                    <a href="{% url 'add_blog' %}" class="dropdown-item">Blog Management</a>
+                                    <div class="hr-dark"></div>
+                                {% endif %}
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <!-- Donation cart  -->
+                    <li class="list-inline-item">
+                        <a class="nav-link" href="{% url 'view_cart' %}">
+                            <div class="text-center">
+                                <i class="fas fa-shopping-cart d-lg-none" aria-hidden="true"></i>
+                                <i class="d-none d-lg-block fas fa-shopping-cart fa-lg" aria-hidden="true"></i>
+                                {% if cart_items %}
+                                    <span class="badge badge-danger"
+                                        id='cartCount'>{{ request.session.cart.keys|length }}
+                                    </span>
+                                {% endif %}
+                            </div>
+                        </a>
+                    </li>
+                </div>
+                <!-- mobile nav -->
+                {% include 'includes/mobile_nav.html' %}
+            </div>
+        </nav>
         
         {% include 'includes/main-nav.html' %}
 

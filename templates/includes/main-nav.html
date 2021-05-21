@@ -96,3 +96,83 @@
         </div>
     </div>
 </nav>
+
+{% load static %}
+
+<!-- Desktop nav menu  -->
+<div class="d-none d-lg-flex col-lg-5 col-xl-6">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a href="{% url 'home' %}" class="nav-link">
+                Home
+            </a>
+        </li>
+        
+        <!-- Brands dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Brands
+            </a>
+            <div class="dropdown-menu rounded-0 border-0 m-0">
+                <div class="hr-dark w-100"></div>
+                <a class="dropdown-item text-uppercase pl-0" href="">All Brands
+                </a>
+                <div class="hr-dark w-100"></div>
+                <a class="dropdown-item" href="">Bianchi
+                </a>
+                <a class="dropdown-item" href="">Cinelli
+                </a>
+                <a class="dropdown-item" href="">Colnago
+                </a>
+                <a class="dropdown-item" href="">De Rosa
+                </a>
+                <a class="dropdown-item" href="">Pinarello
+                </a>
+                <a class="dropdown-item" href="">Wilier
+                </a>
+            </div>
+        </li>
+
+        <!-- Offers dropdown -->
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                aria-expanded="false">
+                Offers
+            </a>
+            <div class="dropdown-menu rounded-0 border-0 m-0">
+                <div class="hr-dark w-100"></div>
+                <a class="dropdown-item text-uppercase pl-0" href="">All Offers
+                </a>
+                <div class="hr-dark w-100"></div>
+                <a class="dropdown-item" href="">New Arrivals
+                </a>
+                <a class="dropdown-item" href="">Latest Deals
+                </a>
+                <a class="dropdown-item" href="">Clearance
+                </a>
+            </div>
+        </li>
+
+         <!-- Reviews link -->
+        <li class="nav-item">
+            <a href="" class="nav-link">
+                Reviews
+            </a>
+        </li>
+       
+        <!-- Blog link -->
+        <li class="nav-item">
+            <a href="" class="nav-link">
+                Blog
+            </a>
+        </li>
+
+         <!-- Contact link -->
+        <li class="nav-item">
+            <a href="" class="nav-link">
+                Contact
+            </a>
+        </li>
+    </ul>
+</div>
