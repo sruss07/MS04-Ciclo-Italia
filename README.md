@@ -91,7 +91,35 @@ To provide customers with a comprehensive, attractive and user friendly site tha
 
 #### User Goals
 
-Users can find their desired bike in the correct size and colour, read reviews on each bike and choose whether to complete a purchase.
+Users can easily find their desired bike in the correct size and colour, read reviews on each bike and choose whether to complete a purchase.
+
+### Scope
+
+Project eflects my current skill-set of HTML, CSS, JavaScript, Python and Django.
+
+Provide a site with relevant categories, product listings and detail pages, with scope for future expansion
+
+#### Existing Feature
+
+- Fully responsive website for all common mobile, tablet and desktop devices, using Bootstrap responsive grid and custom media queries
+- Striking home page jumbotron image to convey a positive initial response from to visitors
+- Intuitive and responsive Navigation menu with associated links and search facility
+- Brands link to Brands page containing images and details of available bikes
+- Search function with filtering.
+- Login page with form
+- Profile/account page containing personal details, payment details and order history
+- Checkout page with payment functionality
+- Reviews page containing customer reviews of products
+- Blog page containing cycling themed blog posts
+- Footer element with social media icon links
+- Project management page for adding, updating and deleting products
+- Blog management page for adding, updating and deleting blog entries.
+
+#### Future Features to Implement
+
+- Possible membership scheme to save on future purchases and a members forum area for sharing cycling information such as routes, holidays, maintenance tips, equipment recommendations etc
+
+
 
 
 
