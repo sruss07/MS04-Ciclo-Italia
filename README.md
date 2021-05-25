@@ -123,6 +123,31 @@ Provide a site with relevant categories, product listings and detail pages, with
 
 The overall structure is aimed at ease of navigation to each section and an intuitive path from initial arrival on the home page through finding the desired product and finally to a smooth and secure final payment checkout experience
 
+#### Interaction Design
 
+The content has been laid out in an intuiitive way, providing a good flow of information. The home page clearly leads to the brands page where customers can easily browse through all available products. Purchases can be easily made from the brands page through an easy to use payments page 
+
+Clear feedback is provided to the user after each interaction, using the messages function in Django
+
+#### Information Architecture
+
+TBA =========> navigational SCHEMA. ![Site Info Schema]()  
+
+The main organising principle for the user is the brand, with each brand section containing a number of available models
+
+- Search by keyword
+- Search by brand
+- Search by model name
+- Search by size
+- Search by colour
+
+#### Database
+
+Development - SQLite3
+Production - Heroku Postgres
+
+#### Data Schema
+
+TBA =========
 
 
