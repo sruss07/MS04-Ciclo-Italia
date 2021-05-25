@@ -150,4 +150,27 @@ Production - Heroku Postgres
 
 TBA =========
 
+### Skeleton
+
+#### Page Structure
+
+![page structure diagram](docs/wireframes/)
+
+#### Wireframes
+
+[MOBILE WIREFRAMES](docs/wireframes/)
+[TABLET WIREFRAMES](docs/wireframes/)
+[DESKTOP WIREFRAMES](docs/wireframes/)
+
+The layout has been kept consistent throughout the site with the navigation bar and footer consistemt to all pages
+
+- Top Navigation bar - Menu with links pointing to each page, inluding:
+  - brands page
+  - offers page
+  - reviews page
+  - blog page
+  - login page
+  - profile page
+  - Footer with social media links
+  
 
