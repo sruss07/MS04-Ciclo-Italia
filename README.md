@@ -117,8 +117,11 @@ Provide a site with relevant categories, product listings and detail pages, with
 
 #### Future Features to Implement
 
-- Possible membership scheme to save on future purchases and a members forum area for sharing cycling information such as routes, holidays, maintenance tips, equipment recommendations etc
+- Membership scheme to save on future purchases and a members forum area for sharing cycling information such as routes, holidays, maintenance tips, equipment recommendations etc
 
+### Structure
+
+The overall structure is aimed at ease of navigation to each section and an intuitive path from initial arrival on the home page through finding the desired product and finally to a smooth and secure final payment checkout experience
 
 
 
