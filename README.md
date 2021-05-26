@@ -238,3 +238,32 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ![Heroku logo](https://res.cloudinary.com/.png) [Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
 
 ![AWS logo](https://res.cloudinary.com/.png) [AWS S3](https://aws.amazon.com/s3/) - Cloud storage for static and media files
+
+### IDE Extensions
+
+- Auto Close Tag
+- Beautify - Code Formatter
+- Indent-Rainbow
+- Bootstrap 4 CDN Snippet
+- Markdown Lint
+- Python
+- JSHint
+
+### Code Validity
+
+- HTML - [W3C](https://validator.w3.org/) - Markup Validation
+- CSS - [W3C](https://jigsaw.w3.org/css-validator/) - Jigsaw CSS Validation
+- JavaScript - [JSHINT](https://jshint.com/) - JavaScript code warning & error check
+- Python - [Pyton Tester](https://extendsclass.com/python-tester.html) Python code syntax checker
+- [Autoprefixer](https://autoprefixer.github.io/) Parses CSS and adds vendor prefixes
+- [Google Mobile-Friendly Test](https://search.google.com/test/mobile-friendly) Mobile-friendly check on site
+- [Website Page Test](https://www.webpagetest.org/) Runs a website speed test from multiple locations around the globe using real browsers (IE and Chrome) and at real consumer connection speeds.
+- [Online-Spellcheck](https://www.online-spellcheck.com/) Online spelling and grammar checks for site and README content
+
+### Other
+
+- [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
+- [Affinity Photo](https://affinity.serif.com/en-gb/photo/) - Image manipulation and colour corrections
+- [PDF Tools](https://tools.pdf24.org/en/) for wireframe PDF compression
+
+> [Back to Top](#table-of-contents) 
