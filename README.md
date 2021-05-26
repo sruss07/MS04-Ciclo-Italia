@@ -172,5 +172,29 @@ The layout has been kept consistent throughout the site with the navigation bar 
   - login page
   - profile page
   - Footer with social media links
-  
 
+  ### Surface
+
+The overall UX aligns with the design priciples of a modern online bike store type site. The overall feel needs to give confidence to customers that they are purchasing from a professional organisation 
+
+#### Colours
+  
+Colour palette has been chosen to reflect the Italian origins of the bikes that are available for customers to purchase
+
+Colour Palette generated on [Coolors.co](https://coolors.co/)
+
+![Colour palette](static/images/.png
+
+#### Typography
+
+"Barlow" font (with fall-back font of Serif). This font was chosen as it has a modern, technical feel that reflects the high level of technical expertise that goes into designing and manufacturing the best Italian bikes
+
+#### Images
+
+High quality imagery is vital to convey the beauty of the products to potential customers. High quality images of each bike allow customers to fully appreciate what they will be buying and allows them to make an informed decision before completing a purchase
+
+README icons are hosted on [Cloudinary](https://cloudinary.com/), a cloud-based service that provides an end-to-end image and video management solution
+
+#### Animations
+
+Carousels have been given a delay for soft transitions, a smooth scroll effect enables in-page navigation and buttons have subtle hover and click effects
