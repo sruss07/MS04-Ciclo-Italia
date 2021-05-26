@@ -198,3 +198,43 @@ README icons are hosted on [Cloudinary](https://cloudinary.com/), a cloud-based 
 #### Animations
 
 Carousels have been given a delay for soft transitions, a smooth scroll effect enables in-page navigation and buttons have subtle hover and click effects
+
+> [Back to Top](#table-of-contents)  
+
+## Technologies Used
+
+Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
+
+### Languages
+
+![Image](https://res.cloudinary.com/.png) [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+![Image](https://res.cloudinary.com/.png) [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+![Image](https://res.cloudinary.com/.png) [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+![Image](https://res.cloudinary.com/.png) [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Integration
+
+![Image](https://res.cloudinary.com/.png) [Bootstrap](https://getbootstrap.com/) - by linking via [Bootstrap CDN](https://www.bootstrapcdn.com/) to HTML Doc
+
+![Image](https://res.cloudinary.com/.png) [FontAwesome](https://fontawesome.com/) Icons for Social Media links
+
+![Image](https://res.cloudinary.com/.png) [Google Fonts](https://fonts.google.com/) - Overall Typography import
+
+![Image](https://res.cloudinary.com/.png) [jQuery](https://jquery.com/) - JavaScript library
+
+![Image](https://res.cloudinary.com/.png) [Django](----------------------) Micro web framework written in Python
+
+### Tools
+
+![VSCode logo](https://res.cloudinary.com/.png) [VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
+
+![Git logo](https://res.cloudinary.com/.png) [Git](https://git-scm.com/) - Distributed Version Control tool to store versions of files and track changes
+
+![GitHub logo](https://res.cloudinary.com/.png) [GitHub](https://github.com/) - A cloud-based hosting service to manage Git repositories
+
+![Heroku logo](https://res.cloudinary.com/.png) [Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
+
+![AWS logo](https://res.cloudinary.com/.png) [AWS S3](https://aws.amazon.com/s3/) - Cloud storage for static and media files
