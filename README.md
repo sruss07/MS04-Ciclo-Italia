@@ -343,4 +343,45 @@ TBA =========
 
  [Back to Top](#table-of-contents) 
 
- 
+ ## Testing
+
+TBA =========> Testing documentation can be found on a separate document [HERE](static/testing/TESTING.md)
+
+## Credits
+
+### Resources
+
+- [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of knowledge
+- Code Institute **SLACK Community** - Main source of assistance
+- [Stack Overflow](https://stackoverflow.com/) - General resource
+- [Youtube](https://www.youtube.com/) - General resource
+- [CSS-Tricks](https://css-tricks.com/) - General resource
+- [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource
+- [CommonMark](https://commonmark.org/help/) - Markdown language reference
+- [Colour Palette - Coolors.co](https://coolors.co)
+- [TinyPNG](https://tinypng.com/) - Compression of images for site
+- [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator
+- [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool
+
+### Media
+
+- Site images used are from .
+- Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
+
+### Content
+
+All content is self-written by site creator.
+
+### Code Snippet
+
+
+## Acknowledgments
+
+I would like to thank:
+
+- My mentor, **Gerard McBride** for his guidance and advice
+- Everyone in Tutor support for always being patient and friendly when approaching with assistance during course material
+- **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests
+
+> [Back to Top](#table-of-contents) 
+
