@@ -279,8 +279,6 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ### Version Control
 
 - Used Git for version control
-- User-confirmation branch for implementing and testing confirmation modal dialogues
-- The branch was then merged with the main branch after any conflicts were addressed
 
 ### Development Environment
 
@@ -289,4 +287,60 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 > [Back to Top](#table-of-contents) 
 
+## Deployment
 
+### Local Installation
+
+#### 1. Cloning the project
+
+- The code can be run locally through clone or download from the repository on [GitHub](https://github.com/sruss07/MS04-Ciclo-Italia).
+- You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'
+
+    ![Image](static/images/clone.png)
+- The Clone option provides a URL, which you can use on your CLI with `git clone <paste url>`.
+- The Download ZIP option provides a link to download a ZIP file which can be unzipped on your local machine. The files can then be uploaded to your IDE
+
+#### 2. Create a Virtual Environment
+
+In the Terminal window:
+
+- Navigate to the folder of the installed files with `cd <path>`
+- Create the virtual environment folder with `python -m venv venv`
+- Activate the virtual environment with `venv\Scripts\activate.bat
+
+#### 3. Create Environmental Variables
+
+TBA =========
+
+#### 4. Create a .gitignore file
+
+- Create a file called **.gitignore** in the root directory and ensure it contains the following git exclusions:
+
+```text
+    core.Microsoft*
+    core.mongo*
+    core.python*
+    env.py
+    __pycache__/
+    *.py[cod]
+    venv
+    .vscode
+    *.sqlite3
+    *.pyc
+```
+
+#### 5. Install project dependencies
+
+- Install project requirements by typing `pip install -r requirements.txt`
+
+#### 6. Deploy locally
+
+- To run the project locally, in the terminal type `python manage.py runserver`
+- This will open a localhost address, which is provided in the CLI.
+- Either copy and paste the url shown below into a new browser tab, or hover over it and click *follow link*
+
+#### 7. Remote Deployment on Heroku
+
+ [Back to Top](#table-of-contents) 
+
+ 
