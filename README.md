@@ -267,3 +267,9 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [PDF Tools](https://tools.pdf24.org/en/) for wireframe PDF compression
 
 > [Back to Top](#table-of-contents) 
+
+## Bugs
+
+### Project barriers and solutions
+
+
