@@ -272,4 +272,6 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Project barriers and solutions
 
+> [Back to Top](#table-of-contents) 
+
 
