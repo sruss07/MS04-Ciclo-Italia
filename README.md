@@ -284,7 +284,9 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Development Environment
 
-- All code was written on [Visual Studio Code](https://code.visualstudio.com/), a local IDE (Integrated Development Environment).
-- The code was then pushed to GitHub where it is stored in my [Repository](https://github.com/sruss07/MS04-Ciclo-Italia).
+- All code was written on [Visual Studio Code](https://code.visualstudio.com/), within the Github environment
+- The code was then pushed to GitHub where it is stored in my [Repository](https://github.com/sruss07/MS04-Ciclo-Italia)
 
 > [Back to Top](#table-of-contents) 
+
+
