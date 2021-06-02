@@ -55,32 +55,32 @@
                         <a class="nav-link underline-transition" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">Bikes</a>
+                        <a class="nav-link underline-transition" href="">Bikes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">Reviews</a>
+                        <a class="nav-link underline-transition" href="">Reviews</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">Blog</a>
+                        <a class="nav-link underline-transition" href="">Blog</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">Logout</a>
+                        <a class="nav-link underline-transition" href="">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">My Profile</a>
+                        <a class="nav-link underline-transition" href="">My Profile</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">Login</a>
+                        <a class="nav-link underline-transition" href="">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link underline-transition" href="{% url '' %}">Signup</a>
+                        <a class="nav-link underline-transition" href="">Signup</a>
                     </li>
                     {% endif %}
                 </ul>
                 <div class="nav-item cart">
-                    <a class="nav-link" href="{% url '' %}">
+                    <a class="nav-link" href="">
                         <i class="fas fa-shopping-cart lg-font"></i>
                         {% if toy_count %}
                         <span class="cart-icon-quantity">{{ toy_count }}</span>
@@ -88,7 +88,7 @@
                     </a>
                 </div>
                 <div>
-                    <form class="form-inline my-2 my-lg-0 justify-content-center nav-search" method="GET" action="{% url 'toys' %}">
+                    <form class="form-inline my-2 my-lg-0 justify-content-center nav-search" method="GET" action="">
                         {% csrf_token %}
                         <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search"
                             aria-label="Search">
