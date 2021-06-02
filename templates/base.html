@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="description" content="The Finest Bikes from Italy" />
-        <meta name="author" content="Jim Morel">
+        <meta name="author" content="Sean Russell">
     {% endblock %}
 
     {% block extra_meta %} 
     {% endblock %} 
 
     {% block fontkit %}
-    <script src="https://kit.fontawesome.com/0de10ebe0d.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/0de10ebe0d.js" crossorigin="anonymous"></script>
     {% endblock %}
 
     {% block corecss %}
@@ -41,7 +41,64 @@
 </head>
 
 <body>
-   
+    <header class="fixed-top">
+        <!--Bootstrap Navigation menu-->
+        <nav class="navbar navbar-dark navbar-expand-xl nav-color md-font" id="testcolor">
+            <a class="navbar-brand" id="logo" href="/">Ciclo Italia</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">Bikes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">Reviews</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">Blog</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">My Profile</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link underline-transition" href="{% url '' %}">Signup</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <div class="nav-item cart">
+                    <a class="nav-link" href="{% url '' %}">
+                        <i class="fas fa-shopping-cart lg-font"></i>
+                        {% if toy_count %}
+                        <span class="cart-icon-quantity">{{ toy_count }}</span>
+                        {% endif %}
+                    </a>
+                </div>
+                <div>
+                    <form class="form-inline my-2 my-lg-0 justify-content-center nav-search" method="GET" action="{% url 'toys' %}">
+                        {% csrf_token %}
+                        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search"
+                            aria-label="Search">
+                        <button class="sm-font my-2 my-sm-0 search-form-button" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <hr class="navbar-separator">
+    </header>
 
     <!-- Display messages block -->
     {% if messages %}
@@ -57,35 +114,7 @@
     {% block content %}
     {% endblock %}
 
-    <!--Footer Section-->
-    <footer>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-7 col-lg-4">
-                    <ul class="social-links">
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank"><i class="text-green fab fa-facebook fa-lg"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com" target="_blank"><i class="text-red fab fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com" target="_blank"><i class="text-green fab fa-twitter-square fa-lg"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://youtube.com" target="_blank"><i class="text-red fab fa-youtube-square fa-lg"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://instagram.com" target="_blank"><i class="text-green fab fa-instagram fa-lg"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://pinterest.com" target="_blank"><i class="text-red fab fa-pinterest fa-lg"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+   
 
     {% block postloadjs %}
     <!-- Main JS -->
