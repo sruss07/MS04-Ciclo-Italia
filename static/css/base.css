@@ -113,54 +113,7 @@ body {
 
 /* Home Page Jumbotron*/
 
-.jumbotron {
-    height: 500px;
-    width: 100%;
-    background: url('/media/jumbotron_image.jpg') no-repeat center center fixed;
-    padding-top: 20%;
-    padding-bottom: 20%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
 
-  .jumbotron-image {
-    animation-name: hero-zoom;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
-  }
-
-  .jumbotron-text {
-      font-size: 4rem;
-  }
-
-/* Home Page Brands */
-
-.brand-top {
-    background-color: darkcyan;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-}
-
-.brand-bottom {
-    background-color: slategray;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-}
-
-.brand-container {
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #198754;
-}
-
-.brand-container img {
-    width: 100%;
-    height: auto;
-}
 
 /* --- Home Page Footer --- */
 
