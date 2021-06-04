@@ -43,8 +43,8 @@
 <body>
     <header class="fixed-top">
         <!--Bootstrap Navbar-->
-        <nav class="navbar navbar-dark navbar-expand-xl nav-color md-font">
-            <a class="navbar-brand" id="logo" href="/">Ciclo Italia</a>
+        <nav class="navbar navbar-dark navbar-expand-xl md-font">
+            <a class="navbar-brand text-green" id="logo" href="/">Ciclo Italia</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,36 +52,36 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" aria-current="page" href="/">Home</a>
+                        <a class="nav-link link-underline text-red" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'bikes' %}">Bikes</a>
+                        <a class="nav-link link-underline text-green" href="{% url 'bikes' %}">Bikes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'reviews' %}">Reviews</a>
+                        <a class="nav-link link-underline text-red" href="{% url 'reviews' %}">Reviews</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'blogs' %}">Blog</a>
+                        <a class="nav-link link-underline text-green" href="{% url 'blogs' %}">Blog</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link link-underline text-red" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'profile' %}">My Profile</a>
+                        <a class="nav-link link-underline text-green" href="{% url 'profile' %}">My Profile</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link link-underline text-red" href="{% url 'account_login' %}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link hover-underline" href="{% url 'account_signup' %}">Signup</a>
+                        <a class="nav-link link-underline text-green" href="{% url 'account_signup' %}">Signup</a>
                     </li>
                     {% endif %}
                 </ul>
                 <div class="nav-item cart">
                     <a class="nav-link" href="">
-                        <i class="fas fa-shopping-cart lg-font"></i>
+                        <i class="fas fa-shopping-cart fa-lg lg-font"></i>
                         {% if bike_count %}
                         <span class="cart-icon-quantity">{{ bike_count }}</span>
                         {% endif %}
@@ -101,7 +101,6 @@
                 </div>
             </div>
         </nav>
-        <hr class="navbar-separator">
     </header>
 
     {% block content %}
@@ -154,19 +153,19 @@
                 </div> 
                 <div class="col-12 col-md-4">
                     <div class="footer-links">
-                        <a href="{% url 'home' %}" class="hover-underline">Home</a>
+                        <a href="{% url 'home' %}" class="link-underline">Home</a>
                     </div>
                     <div class="footer-links ">
-                        <a href="{% url 'toys' %}" class="hover-underline">Bikes</a>
+                        <a href="{% url 'toys' %}" class="link-underline">Bikes</a>
                     </div>
                     <div class="footer-links ">
-                        <a href="{% url 'reviews' %}" class="hover-underline">Reviews</a>
+                        <a href="{% url 'reviews' %}" class="link-underline">Reviews</a>
                     </div>
                     <div class="footer-links">
-                        <a href="{% url 'blogs' %}" class="hover-underline">Blogs</a>
+                        <a href="{% url 'blogs' %}" class="link-underline">Blogs</a>
                     </div>
                     <div class="footer-links">
-                        <a href="#" class="hover-underline" id="show-contact-form">Contact</a>
+                        <a href="#" class="link-underline" id="show-contact-form">Contact</a>
                     </div>
                 </div>                                     
                 <div class="col-12 col-md-4 copyright">
