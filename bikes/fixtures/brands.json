@@ -3,48 +3,48 @@
         "model": "bikes.brand",
         "pk": 1,
         "fields": {
-        "name": "Bianchi",
-        "frontend_name": "Bianchi"
-      }
+            "name": "Bianchi",
+            "frontend_name": "Bianchi"
+        }
     },
     {
         "model": "bikes.brand",
         "pk": 2,
         "fields": {
-        "name": "Cinelli",
-        "frontend_name": "Cinelli"
+            "name": "Cinelli",
+            "frontend_name": "Cinelli"
         }
     },
     {
         "model": "bikes.brand",
         "pk": 3,
         "fields": {
-        "name": "Colnago",
-        "frontend_name": "Colnago"
+            "name": "Colnago",
+            "frontend_name": "Colnago"
         }
     },
     {
         "model": "bikes.brand",
         "pk": 4,
         "fields": {
-        "name": "De Rosa",
-        "frontend_name": "De Rosa"
+            "name": "De Rosa",
+            "frontend_name": "De Rosa"
         }
     },
     {
         "model": "bikes.brand",
         "pk": 5,
         "fields": {
-        "name": "Pinarello",
-        "frontend_name": "Pinarello"
+            "name": "Pinarello",
+            "frontend_name": "Pinarello"
         }
     },
     {
         "model": "bikes.brand",
         "pk": 6,
         "fields": {
-        "name": "Wilier",
-        "frontend_name": "Wilier"
+            "name": "Wilier",
+            "frontend_name": "Wilier"
         }
     }
 ]
