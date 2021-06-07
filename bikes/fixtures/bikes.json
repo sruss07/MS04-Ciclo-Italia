@@ -34,7 +34,7 @@
       "brand": 1,
       "sku": "BK-0003",
       "name": "Bianchi Speciallisima",
-      "description": "The Speciallisima helps you to fly up the climbs and dominate on the flat. The carbon frame is light, so none of your climbing power is wasted when the road turns upward, but it is also superbly stiff providing excellent transfer of that power to the road.",
+      "description": "The Speciallisima helps you to fly up the climbs and dominate on the flat. The  carbon fibre frame is light, so none of your climbing power is wasted when the road turns upward, but it is also superbly stiff providing excellent transfer of that power to the road.",
       "price": "5,500.00",
       "image_url": null,
       "image": "Bianchi_Speciallisima.png"
@@ -48,7 +48,7 @@
       "brand": 1,
       "sku": "BK-0004",
       "name": "Bianchi Sprint",
-      "description": "Launched in the 1970's, the original Sprint was loved by riders of the time, and is much admired still as an iconic piece of cycling's history. The new Sprint is created in the same mould as it's predecessor - it's a racing carbon bike for those new to the world of road cycling.",
+      "description": "Launched in the 1970's, the original Sprint was loved by riders of the time, and is much admired still as an iconic piece of cycling's history. The new Sprint is created in the same mould as it's predecessor - it's a racing  carbon fibre bike for those new to the world of road cycling.",
       "price": "5,500.00",
       "image_url": null,
       "image": "Bianchi_Sprint.png"
@@ -62,7 +62,7 @@
       "brand": 2,
       "sku": "BK-0005",
       "name": "Cinelli Pressure",
-      "description": "Aerodynamics is the key to the Pressure. Born to race, this monocoque high modulus carbon T700 fibre aero road bike is designed to cut through the air. The sections of each tube are designed to not only be aero but help minimise drag. Weight and stiffness are perfectly balanced to transfer all the rider's power into speed.",
+      "description": "Aerodynamics is the key to the Pressure. Born to race, this monocoque high modulus carbon fibre T700 fibre aero road bike is designed to cut through the air. The sections of each tube are designed to not only be aero but help minimise drag. Weight and stiffness are perfectly balanced to transfer all the rider's power into speed.",
       "price": "4,500.00",
       "image_url": null,
       "image": "Cinelli_Pressure.png"
@@ -76,7 +76,7 @@
       "brand": 2,
       "sku": "BK-0006",
       "name": "Cinelli Superstar",
-      "description": "The Superstar is Cinelli's UCI Approved carbon endurance disc bike and is innovation in its finest form. Using traditional Italian racing geometry, the frame is designed to give comfort in multi-day events and Gran Fondos, but to also be quick enough for racing and sprints.",
+      "description": "The Superstar is Cinelli's UCI Approved  carbon fibre endurance disc bike and is innovation in its finest form. Using traditional Italian racing geometry, the frame is designed to give comfort in multi-day events and Gran Fondos, but to also be quick enough for racing and sprints.",
       "price": "4,000.00",
       "image_url": null,
       "image": "Cinelli_Superstar.png"
@@ -110,3 +110,228 @@
       "image": "Cinelli_Vigorelli.png"
     }
   },
+
+  {
+    "model": "bikes.bike",
+    "pk": 9,
+    "fields": {
+      "brand": 3,
+      "sku": "BK-0009",
+      "name": "Colnago C64",
+      "description": "The C64 frame is completely handmade in Italy and is the result of more than 2 years of research. It represents the continuity of the history of a company that has collected successes and innovations for more than 60 years.",
+      "price": "7,700.00",
+      "image_url": null,
+      "image": "Colnago_C64.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 10,
+    "fields": {
+      "brand": 3,
+      "sku": "BK-0010",
+      "name": "Colnago CLX",
+      "description": "A perfect balance between stiffness, lightness and comfort, the CLX is designed with edurance riders in mind. Stiff in all the right places for maximum power transfer and light and comfortable, this is a genuine speed machine.",
+      "price": "3,000.00",
+      "image_url": null,
+      "image": "Colnago_CLX.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 11,
+    "fields": {
+      "brand": 3,
+      "sku": "BK-0011",
+      "name": "Colnago V3",
+      "description": "All the advantages of Colnago qaulity in a top quality racing bike, the V3 offesr an excellent level of performance. The V3 perfectly balances stiffness, weight and compliance, offering precise handling and a racy feel.",
+      "price": "3,800.00",
+      "image_url": null,
+      "image": "Colnago_V3.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 12,
+    "fields": {
+      "brand": 3,
+      "sku": "BK-0012",
+      "name": "Colnago V3RS",
+      "description": "Featuring a Colnago monocoque frame, the V3RS is the bike that can make your dreams come true. Every detail has been studied and developed to obtain the maximum in terms of performance and comfort. The V3RS is fast on long climbs and on the flat, the perfect bike for all occasions.",
+      "price": "5,500.00",
+      "image_url": null,
+      "image": "Colnago_V3RS.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 13,
+    "fields": {
+      "brand": 4,
+      "sku": "BK-0013",
+      "name": "De Rosa Corum",
+      "description": "The Corum is a high performance bike that allows steel to merge perfectly with sizes and dimensions designed for those who want speed with a frame built in the traditional way. This artisan frame is made with peformance in mind.",
+      "price": "4,800.00",
+      "image_url": null,
+      "image": "DeRosa_Corum.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 14,
+    "fields": {
+      "brand": 4,
+      "sku": "BK-0014",
+      "name": "De Rosa Idol",
+      "description": "The Idol is perfectly named, designed with beautiful lines and aesthetics. Its unmistakable appearance is able to express the style and design that have always been De Rosa's trademark. Its Arc Slope curvature, renowned by many as an element of absolute refinement, remains the signature in the second Idol generation.",
+      "price": "4,000.00",
+      "image_url": null,
+      "image": "DeRosa_Idol.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 15,
+    "fields": {
+      "brand": 4,
+      "sku": "BK-0015",
+      "name": "De Rosa Merak",
+      "description": "The Merak represents De Rosa's racing soul, competitive and winning. With a  carbon fibre fibre frame, the Merak is suitable for all kinds of itinerary and ready for every challenge, from the highest competition to the more demanding Gran Fondo.",
+      "price": "5,700.00",
+      "image_url": null,
+      "image": "DeRosa_Merak.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 16,
+    "fields": {
+      "brand": 4,
+      "sku": "BK-0016",
+      "name": "De Rosa Pininfarina",
+      "description": "De Rosa and Pininfarina came together through shared values to realize the new Pininfarina, modern and elegant that – as the previous model – aims to be the point of reference for the aerodynamic and fast bikes in the international cycling scenery.",
+      "price": "3,350.00",
+      "image_url": null,
+      "image": "DeRosa_Pininfarina.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 17,
+    "fields": {
+      "brand": 5,
+      "sku": "BK-0017",
+      "name": "Pinarello Angliru",
+      "description": "The Angliru brings race-day performance to the masses. Built to go long distances, the carbon fibre frame uses comfortable geometry and includes carbon fibre fork to smooth bumpy roads enabling you to float up climbs with ease, getting the most out of every pedal stroke.",
+      "price": "4,900.00",
+      "image_url": null,
+      "image": "Pinarello_Angliru.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 18,
+    "fields": {
+      "brand": 5,
+      "sku": "BK-0018",
+      "name": "Pinarello Dogma",
+      "description": "The Dogma is the symbol of competition, a name that evokes excellence, quality, perfection, beauty, Italian design. A stiff and light bike, with excellent aerodynamic balance, all features which help to make the Dogma the most successful bicycle in history.",
+      "price": "6,700.00",
+      "image_url": null,
+      "image": "Pinarello_Dogma.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 19,
+    "fields": {
+      "brand": 5,
+      "sku": "BK-0019",
+      "name": "Pinarello Prince",
+      "description": "The Prince is a bicycle with technical characteristics and performance standards that outperform many high end road bikes on the market today. The frame is built with extremely light carbon fibre fibre that's aerodynamically shaped, allowing the bike to slip through the wind.",
+      "price": "3,200.00",
+      "image_url": null,
+      "image": "Pinarello_Prince.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 20,
+    "fields": {
+      "brand": 5,
+      "sku": "BK-0020",
+      "name": "Pinarello Razha",
+      "description": "The Razha is a full carbon fibre race bike, perfect for long distance cyclists, amateurs and future champtions. This powerful bike is stiff and responsive, and is designed to offer an enjoyable ride over long hours in the saddle.",
+      "price": "2,500.00",
+      "image_url": null,
+      "image": "Pinarello_Razha.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 21,
+    "fields": {
+      "brand": 6,
+      "sku": "BK-0021",
+      "name": "Wilier Cento",
+      "description": "The Cento is the perfect aerodynamic racing bike for athletes who are looking for maximum speed in an elegant, sleek bike at a competitive price. The Cento's new round fork steerer tube increases torsional stiffness and riding safety.",
+      "price": "3,700.00",
+      "image_url": null,
+      "image": "Wilier_Cento.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 22,
+    "fields": {
+      "brand": 6,
+      "sku": "BK-0022",
+      "name": "Wilier Filante",
+      "description": "The Filante is an extremely lightweight aerodynamic bicycle with a significantly improved stiffness to weight ratio. The result is a top of the range, aerodynamic frame that is perfect for long days on the flt and in the high mountains.",
+      "price": "7,200.00",
+      "image_url": null,
+      "image": "Wilier_Filante.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 23,
+    "fields": {
+      "brand": 6,
+      "sku": "BK-0023",
+      "name": "Wilier GTR",
+      "description": "Whether you race or not, the GTR is aimed at the rider who needs a bike for multiple uses. Light and responsive for the racer, yet comfortable and versatile for those who enjoy cycling without stress, The GTR is the complete all rounder.",
+      "price": "2,200.00",
+      "image_url": null,
+      "image": "Wilier_GTR.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 24,
+    "fields": {
+      "brand": 6,
+      "sku": "BK-0024",
+      "name": "Wilier SLR",
+      "description": "The SLR encapsulates the most complex concepts of lightness and total integration in simple aesthetics. These are the features the most demanding cyclists seek in the most technologically advanced racing bikes.",
+      "price": "5,200.00",
+      "image_url": null,
+      "image": "Wilier_SLR.png"
+    }
+  }
+]
