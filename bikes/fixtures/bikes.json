@@ -1,0 +1,112 @@
+[
+{
+    "model": "bikes.bike",
+    "pk": 1,
+    "fields": {
+      "brand": 1,
+      "sku": "BK-0001",
+      "name": "Bianchi Aria",
+      "description": "The Aria is an aero race bike for the rider who wants to go fast and look good while they're doing it. It's streamlined enough for road racing or shorter distance triathlons, with a rigid performance oriented frame.",
+      "price": "2,600.00",
+      "image_url": null,
+      "image": "Bianchi_Aria.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 2,
+    "fields": {
+      "brand": 1,
+      "sku": "BK-0002",
+      "name": "Bianchi Oltre",
+      "description": "The Oltre is a bike driven to perform. It's precision handling, combined with vibration cancelling Bianchi CV System, provides incomparable control. Perfect power transfer means evert watt you push through the pedals takes you closer to the win. If you want it bad enough, the Oltre is the tool to take you to the top.",
+      "price": "7,000.00",
+      "image_url": null,
+      "image": "Bianchi_Oltre.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 3,
+    "fields": {
+      "brand": 1,
+      "sku": "BK-0003",
+      "name": "Bianchi Speciallisima",
+      "description": "The Speciallisima helps you to fly up the climbs and dominate on the flat. The carbon frame is light, so none of your climbing power is wasted when the road turns upward, but it is also superbly stiff providing excellent transfer of that power to the road.",
+      "price": "5,500.00",
+      "image_url": null,
+      "image": "Bianchi_Speciallisima.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 4,
+    "fields": {
+      "brand": 1,
+      "sku": "BK-0004",
+      "name": "Bianchi Sprint",
+      "description": "Launched in the 1970's, the original Sprint was loved by riders of the time, and is much admired still as an iconic piece of cycling's history. The new Sprint is created in the same mould as it's predecessor - it's a racing carbon bike for those new to the world of road cycling.",
+      "price": "5,500.00",
+      "image_url": null,
+      "image": "Bianchi_Sprint.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 5,
+    "fields": {
+      "brand": 2,
+      "sku": "BK-0005",
+      "name": "Cinelli Pressure",
+      "description": "Aerodynamics is the key to the Pressure. Born to race, this monocoque high modulus carbon T700 fibre aero road bike is designed to cut through the air. The sections of each tube are designed to not only be aero but help minimise drag. Weight and stiffness are perfectly balanced to transfer all the rider's power into speed.",
+      "price": "4,500.00",
+      "image_url": null,
+      "image": "Cinelli_Pressure.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 6,
+    "fields": {
+      "brand": 2,
+      "sku": "BK-0006",
+      "name": "Cinelli Superstar",
+      "description": "The Superstar is Cinelli's UCI Approved carbon endurance disc bike and is innovation in its finest form. Using traditional Italian racing geometry, the frame is designed to give comfort in multi-day events and Gran Fondos, but to also be quick enough for racing and sprints.",
+      "price": "4,000.00",
+      "image_url": null,
+      "image": "Cinelli_Superstar.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 7,
+    "fields": {
+      "brand": 2,
+      "sku": "BK-0007",
+      "name": "Cinelli Veltrix",
+      "description": "The Veltrix is Cinelli's endurance bike which is designed to be comfortable enough to ride at a smooth pace all day or fast enough to use for Strava smashing rides. The Veltrix offers the optimum position in the saddle for power transfer and aerodynamics. It perfectly aligns the rider's centre of gravity, resulting in sublime handling.",
+      "price": "3,000.00",
+      "image_url": null,
+      "image": "Cinelli_Veltrix.png"
+    }
+  },
+
+  {
+    "model": "bikes.bike",
+    "pk": 8,
+    "fields": {
+      "brand": 2,
+      "sku": "BK-0008",
+      "name": "Cinelli Vigorelli",
+      "description": "Thanks to its fixed-gear criterium racing heritage, the Vigorelli is for riders looking for a fast and positive ride, but with the everyday comfort of a steel frame and added benefit of disc brakes. The different steel tube thicknesses for different parts of the frame allows for perfect weight distribution.",
+      "price": "2,000.00",
+      "image_url": null,
+      "image": "Cinelli_Vigorelli.png"
+    }
+  },
