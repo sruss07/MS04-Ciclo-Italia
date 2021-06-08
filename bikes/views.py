@@ -4,8 +4,6 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Bike, Brand
-from reviews.models import BikeReview
-from reviews.forms import BikeReviewForm
 
 
 def all_bikes(request):
