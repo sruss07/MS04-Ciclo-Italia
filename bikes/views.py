@@ -24,7 +24,7 @@ def all_bikes(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "No search request")
+                messages.error(request, "No search request entered!")
                 return redirect(reverse('bikes'))
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
