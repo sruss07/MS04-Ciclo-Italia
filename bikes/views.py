@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 
 from .models import Bike, Brand
 from reviews.models import BikeReview
@@ -8,8 +9,7 @@ from reviews.forms import BikeReviewForm
 
 
 def all_bikes(request):
-    """A view that shows all bikes,\
-    with searching and sorting features """
+    """A view that shows all bikes using searching and sorting"""
 
     bikes = Bike.objects.all()
     query = None
