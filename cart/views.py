@@ -8,7 +8,7 @@ def view_cart(request):
 
 
 def add_to_cart(request, bike_id):
-    """Function to add quantity in the cart"""
+    """Function to add quantity to cart"""
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
     cart = request.session.get('cart', {})
@@ -19,7 +19,7 @@ def add_to_cart(request, bike_id):
     else:
         if quantity > 0 and quantity <= 5:
             if bike_id in list(cart.keys()):
-                # Prevents user from adding more than 5 items 
+                # Prevents user from adding more than 5 items
                 if quantity + cart[bike_id] > 5:
                     messages.warning(
                         request,
