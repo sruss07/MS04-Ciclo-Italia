@@ -40,19 +40,6 @@
             <!--Add to cart button, code from CI lesson 'Adding Products-->  
             <form action="{% url 'add_to_cart' bike.id %}" method="POST">
                 {% csrf_token %}
-                {% with product.has_sizes as s %}
-                    {% if s %}
-                        <div class="col-12">
-                            <p><strong>Size:</strong></p>
-                            <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                                    <option value="xs">51cm</option>
-                                    <option value="s">53cm</option>
-                                    <option value="m" selected>55cm</option>
-                                    <option value="l">57cm</option>
-                                    <option value="xl">59cm</option>
-                                </select>
-                            </div>
-                    {% endif %}
                 <div class="quantity-input-header">
                     <p>Quantity:</p>
                 </div>                  
