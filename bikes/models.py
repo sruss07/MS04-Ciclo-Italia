@@ -2,6 +2,10 @@ from django.db import models
 
 
 class Brand(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Brands'
+
     name = models.CharField(max_length=254)
     frontend_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -13,6 +17,10 @@ class Brand(models.Model):
 
 
 class Bike(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Bikes'
+
     brand = models.ForeignKey(
         'Brand', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=200, null=True, blank=True)
