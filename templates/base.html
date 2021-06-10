@@ -60,10 +60,10 @@
                         <a class="nav-link link-underline text-green" href="{% url 'bikes' %}">Bikes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-underline text-red" href="{% url 'reviews' %}">Reviews</a>
+                        <a class="nav-link link-underline text-red" href="">Reviews</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-underline text-green" href="{% url 'blogs' %}">Blog</a>
+                        <a class="nav-link link-underline text-green" href="">Blog</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -158,13 +158,13 @@
                         <a href="{% url 'home' %}" class="link-underline">Home</a>
                     </div>
                     <div class="footer-links ">
-                        <a href="{% url 'toys' %}" class="link-underline">Bikes</a>
+                        <a href="{% url 'bikes' %}" class="link-underline">Bikes</a>
                     </div>
                     <div class="footer-links ">
-                        <a href="{% url 'reviews' %}" class="link-underline">Reviews</a>
+                        <a href="" class="link-underline">Reviews</a>
                     </div>
                     <div class="footer-links">
-                        <a href="{% url 'blogs' %}" class="link-underline">Blogs</a>
+                        <a href="" class="link-underline">Blogs</a>
                     </div>
                     <div class="footer-links">
                         <a href="#" class="link-underline" id="show-contact-form">Contact</a>
@@ -194,7 +194,7 @@
                 </div>
                 <div class="col-12">
                     <h1>Contact</h1>
-                    <form action="{% url 'landing' %}" method="POST">
+                    <form action="{% url 'home' %}" method="POST">
                         {% csrf_token %}
                         <label>Name</label>
                         <input class="form-control contact-form-input" type="text" placeholder="Name" required>
