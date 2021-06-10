@@ -9,12 +9,8 @@ from cart.context import cart_contents
 
 import stripe
 
+
 def checkout(request):
-    """
-    A view to get the items from the cart
-    and pass it into the checkout form.
-    Code used from CI checkout and Stripe lessons
-    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -80,14 +76,14 @@ def checkout(request):
 
 def checkout_success(request, order_number):
     """
-    The cart will be emptied after a successful order checkout, 
-    confirmed by a success message
+    Cart will be emptied after a successful order checkout,
+    and confirmed with a success message
     """
     order = get_object_or_404(Order, order_number=order_number)
 
     if request.user.is_authenticated:
         profile = Profile.objects.get(user=request.user)
-        # Order will be added to order history of user's profile
+        # Order will be added to order history in user profile
         order.profile = profile
         order.save()
 
