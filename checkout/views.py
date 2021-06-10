@@ -5,7 +5,9 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from bikes.models import Bike
+from cart.context import cart_contents
 
+import stripe
 
 def checkout(request):
     """
