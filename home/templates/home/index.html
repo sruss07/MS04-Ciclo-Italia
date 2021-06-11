@@ -1,40 +1,30 @@
-{% extends "base.html" %} 
-{% load static %} 
- 
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
 
 {% block content %}
-    <div class="image-hero">        
-      <div class="container-fluid">
-          <!--Banner-->
-          <div class="row">
-              <div class="col-6 col-lg-7 offset-1 banner-text xs-font" data-aos="fade-right" data-aos-easing="ease-in" data-aos-duration="1000">
-                  <p class="banner-text-header">
-                      The Finest Road Bikes from Italy
-                  </p>
-                  <p>
-                      Choose a new road bike from the true artists of bike design!!
-                  </p>
-              </div>
+    <div class="hero-section container h-100">
+        <div class="row h-100">
+          <div class="col-md-12 mb-4 white-text text-center">
+              <!-- Landing Page and call to action -->
+            <h1 class="h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5"><strong>Ciclo Italia</strong></h1>
+            <hr class="hr-light my-4">
+            <h5 class="text-uppercase mb-4 white-text"><strong>The Best Italian Road Bikes</strong></h5>
+            <a class="btn btn-outline-white" href="{% url 'bikes' %}">Shop Now</a>
+            <a class="btn btn-outline-white" href="{% url 'blog_list' %}">View Blogs</a>
+            <a class="btn btn-outline-white" href="{% url 'review_list' %}">Read Reviews</a>
           </div>
-          <div class="row">
-              <div class="col-4 offset-1" data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1000">
-                  <a href="" class="banner-button">
-                      Shop Now
-                  </a>
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="container home-text lg-font mx-auto">
-      <!--Bikes-->
-      <div class="row section-space">
-          <div class="col-12 landing-hor"  data-aos="fade-up" data-aos-easing="ease-in" data-aos-duration="1500">
-              <span class="landing-decoration">Shop Now</span>
-          </div>                
-      </div> 
+        </div>
+</div>
 {% endblock %}
-  
+
 
 
 
