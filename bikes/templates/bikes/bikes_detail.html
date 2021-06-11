@@ -1,111 +1,104 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extracss %}
-    <link rel="stylesheet" href="{% static 'bikes/css/bikes.css' %}">   
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
 {% endblock %}
 
 {% block content %}
-
-<div class="container">
-    <div class="row bike-header sm-font">
-        <div class="col-12 bikepage-path">
-            <a href="/">Home</a>
-            <span>/</span>
-            <a href="{% url 'bikes' %}">Bikes</a>
-            <span>/</span>
-            <span>{{ bike.id }}</span>            
-        </div>         
-    </div>
+<div class="overlay"></div>
+<div class="container-fluid">
     <div class="row">
-        <div class="col-12 col-lg-6">
-            <a href="{{ MEDIA_URL }}{{ bike.image }}" target="_blank" class="bike-box mx-auto">  
-                {% if bike.image %}            
-                    <div>
-                        <img src="{{ MEDIA_URL }}{{ bike.image }}" class="bike-image" 
-                        alt="{{ bike.name }}">
-                    </div>
-                {% else %}  
-                    <div>
-                        <img src="{{ MEDIA_URL }}no_image_available.jpg" class="bike-image" alt="no image">
-                    </div>                
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if bike.image %}
+                <a href="{{ bike.image.url }}" target="_blank">
+                    <img class="card-img-top img-fluid" src="{{ bike.image.url }}" alt="{{ bike.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.jpg" alt="{{ bike.name }}">
+                </a>
                 {% endif %}
-            </a>                    
-        </div>
-        <div class="col-12 col-lg-6">
-            <p class="bike-name lg-font">{{ bike.name }}</p>           
-            <p>{{ bike.brand }} | Item # {{ bike.sku }}</p>                      
-            <p class="bike-price md-font">£{{ bike.price }}</p>  
-            <p class="bike-description sm-font">{{ bike.description }}</p> 
-            <!--Add to cart button, code from CI lesson 'Adding Products-->  
-            <form action="{% url 'add_to_cart' bike.id %}" method="POST">
-                {% csrf_token %}
-                <div class="quantity-input-header">
-                    <p>Quantity:</p>
-                </div>                  
-                <div class="quantity-input">
-                    <input type="number" name="quantity" value="1" min="1" max="10" data-bike-id="{{ bike.id }}" id="id_qty_{{ bike.id }}">
-                </div>
-                <button class="general-button" type="submit">
-                    Add to Cart
-                </button>
-                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                {% endwith %}
-            </form> 
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-12 review sm-font">
-            <div class="review-header">
-                <p>Reviews</p>
-                <hr>
             </div>
-            {% if bike_reviews.count %}
-                {% for review in bike_reviews %}
-                <div class="review-wrapper"> 
-                    <p class="review-comment">"{{ review.comment }}"</p>
-                    <p class="review-name">{{ review.name }}</p>  
-
-                    {% if review.user_review == request.user %}
-                    <form action="{% url 'delete_bike_review' review.id %}" method="POST">
-                        {% csrf_token %} 
-                        <div>
-                            <input type="hidden" name="redirect_url" value="{{ request.path }}">                
-                            <button class="review-delete xs-font" type="submit">
-                                <i class="far fa-trash-alt"></i> Delete Review
-                            </button>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <!-- Bike details -->
+            <div class="bike-details-container mb-5 mt-md-5">
+                <h4 class="logo-font mb-0">{{ bike.name }}</h4>
+                <p class="lead mb-0 text-left font-weight-bold">€{{ bike.price }}</p>
+                {% if bike.brand %}
+                <p class="small mt-1 mb-0">
+                    <a class="text-muted" href="{% url 'bikes' %}?category={{ bike.brand.name }}">
+                        <i class="fas fa-tags"></i>{{ bike.brand.frontend_name }}
+                    </a>
+                </p>
+                {% endif %}
+                {% if bike.rating %}
+                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ bike.rating }} / 5</small>
+                {% else %}
+                <small class="text-muted">No Rating</small>
+                {% endif %}
+                {% if request.user.is_superuser %}
+                <small class="ml-3">
+                    <a href="{% url 'edit_bike' bike.id %}">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_bike' bike.id %}">Delete</a>
+                </small>
+                {% endif %}
+                <p class="mt-3">{{ bike.description }}</p>
+                <form class="form" action="{% url 'add_to_cart' bike.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <!-- Bike quantity -->
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="decrement-qty btn-outline-black btn-sm"
+                                            data-item_id="{{ bike.id }}" id="decrement-qty_{{ bike.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-minus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1"
+                                        min="1" max="99" data-item_id="{{ bike.id }}" id="id_qty_{{ bike.id }}">
+                                    <div class="input-group-append">
+                                        <button class="increment-qty btn-outline-black btn-sm"
+                                            data-item_id="{{ bike.id }}" id="increment-qty_{{ bike.id }}">
+                                            <span class="icon">
+                                                <i class="fas fa-plus"></i>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </form>    
-                    {% endif %} 
 
-                </div>
-                {% endfor %}  
-
-            {% else %}
-                <h2>Write Your Review!</h2>
-            {% endif %}
-
-            {% if user.is_authenticated %}
-            <form action="{% url 'add_bike_review' bike.id %}" method="POST">
-                {% csrf_token %}       
-                <div class="review-form">
-                    {{ bike_review_form.name | as_crispy_field }}     
-                    {{ bike_review_form.comment | as_crispy_field }} 
-                    <!--Redirect to same bike after form is submitted-->
-                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                    <!--Reviews can only be entered once logged in-->
-                    <button class="general-button review-add-button">Add Your Review</button>
-                </div>  
-            </form>    
-        
-            {% else %}
-            <div class="review-login">
-                <p>Please <a href="{% url 'account_login' %}">login</a> to add your review</p>
+                        <div class="col-12">
+                            <a href="{% url 'bikes' %}" class="btn btn-outline-black mt-5">
+                                <span class="icon">
+                                    <i class="fas fa-chevron-left"></i>
+                                </span>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn btn-outline-black text-uppercase mt-5" value="Add to Bag">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
             </div>
-            {% endif %}                    
- 
         </div>
     </div>
 </div>
+{% endblock %}
 
+{% block postloadjs %}
+{{ block.super }}
+{% include 'bikes/includes/quantity_script.html' %}
 {% endblock %}
