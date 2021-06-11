@@ -5,8 +5,8 @@ from .models import Order
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('first_name', 'last_name', 'email_address', 'address',
-                  'postcode', 'town', 'comments')
+        fields = ('first_name', 'last_name', 'email_address', 'address', 
+                  'town', 'county', 'postcode')
 
         widgets = {
             'first_name': forms.TextInput(attrs={
@@ -18,26 +18,26 @@ class OrderForm(forms.ModelForm):
             'email_address': forms.TextInput(attrs={
                 'class': 'input',
                 'placeholder': 'Email Address'}),
-            'address': forms.TextInput(attrs={
+            'address1': forms.TextInput(attrs={
                 'class': 'input',
-                'placeholder': 'Address'}),
-            'postcode': forms.TextInput(attrs={
-                'class': 'input',
-                'placeholder': 'Postcode'}),
+                'placeholder': 'Address1'}),
             'town': forms.TextInput(attrs={
                 'class': 'input',
                 'placeholder': 'Town'}),
-            'comments': forms.Textarea(attrs={
-                'class': 'textarea', 'rows': 5,
-                'placeholder': 'Comments'}),
+            'county': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'County'}),
+            'postcode': forms.TextInput(attrs={
+                'class': 'input',
+                'placeholder': 'Postcode'}),
         }
 
     def __init__(self, *args, **kwargs):
         """
-        Function to add placeholders and classes,
-        code used from CI checkout lesson
+        Add placeholders and classes, code from CI checkout lesson
         """
         super().__init__(*args, **kwargs)
 
         for field in self.fields:
             self.fields[field].label = False
+
