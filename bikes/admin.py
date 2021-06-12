@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Product, Category
+from .models import Bike, Brand
 
 # Register your models here.
 
 
-class ProductAdmin(admin.ModelAdmin):
+class BikeAdmin(admin.ModelAdmin):
     list_display = (
         'sku',
         'name',
@@ -17,12 +17,12 @@ class ProductAdmin(admin.ModelAdmin):
     ordering = ('sku',)
 
 
-class CategoryAdmin(admin.ModelAdmin):
+class BrandAdmin(admin.ModelAdmin):
     list_display = (
         'frontend_name',
         'name',
     )
 
 
-admin.site.register(Product, ProductAdmin)
-admin.site.register(Category, CategoryAdmin)
+admin.site.register(Bike, BikeAdmin)
+admin.site.register(Brand, BrandAdmin)
