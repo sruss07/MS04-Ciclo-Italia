@@ -46,8 +46,8 @@
                                     {% include "cart/bike-info.html" %}
                                 </div>
                                 <div class="col-12 col-sm-6 order-sm-last">
-                                    <p class="my-0">Price Each: €{{ item.bike.price }}</p>
-                                    <p><strong>Subtotal: </strong>€{{ item.bike.price | calc_subtotal:item.quantity }}</p>
+                                    <p class="my-0">Price Each: £{{ item.bike.price }}</p>
+                                    <p><strong>Subtotal: </strong>£{{ item.bike.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     {% include "cart/quantity-form.html" %}
@@ -83,13 +83,13 @@
                                         {% include "cart/bike-info.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.bike.price }}</p>
+                                        <p class="my-0">£{{ item.bike.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         {% include "cart/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">€{{ item.bike.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">£{{ item.bike.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
