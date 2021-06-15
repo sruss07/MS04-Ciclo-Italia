@@ -33,7 +33,7 @@ def add_to_cart(request, item_id):
     return redirect(redirect_url)
 
 
-def adjust_cart(request, item_id):
+def update_cart(request, item_id):
     """Adjust quantity of specified bike"""
 
     bike = get_object_or_404(Bike, pk=item_id)
