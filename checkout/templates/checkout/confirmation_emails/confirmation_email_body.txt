@@ -1,0 +1,19 @@
+
+Hello {{ order.full_name }}!
+
+Thank you for purchasing your new bike from Ciclo Italia
+
+This email is confirmation of your order. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.date }}
+
+Order Total: €{{ order.order_total }}
+
+Your bike will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+
+Feel free to contact us at {{ contact_email }}.
+
+Thanks again for your order, we hope you enjoy your new bike!!
+
+Ciclo Italia
