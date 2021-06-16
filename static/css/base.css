@@ -15,7 +15,7 @@ html {
 }
 
 .logo-font {
-    color: #64808A;
+    color: #198754;
     text-transform: uppercase;
 }
 
@@ -34,7 +34,7 @@ body {
   }
 
   .hr-light {
-    border-top: 3px solid #fff;
+    border-top: 3px solid #198754;
     width: 80px;
   }
 
@@ -76,7 +76,7 @@ body {
 
 .message-container {
     position: fixed;
-    top: 72px;
+    top: 70px;
     right: 15px;
     z-index: 99999999999;
 }
@@ -101,7 +101,7 @@ body {
     right: 36px;
 }
 
-/* Convenience classes - colours copied from Bootstrap */
+/* Convenience classes - colours from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -141,14 +141,14 @@ body {
 }
 
 
-/* ------------------- Products */
+/* ------------------- Bikes */
 .overlay {
 	height: 100%;
 	width: 100%;
 	top: 0;
 	left: 0;
 	position: fixed;
-	background: white;
+	background: #8DBEF2;
 	z-index: -1;
 }
 
@@ -159,15 +159,15 @@ body {
 }
 
 .btt-button {
-    height: 42px;
-    width: 42px;
+    height: 45px;
+    width: 45px;
     position: fixed;
     bottom: 10px;
     right: 10px;
 } 
 
 .btn-outline-black {
-    background: white;
+    background: #F9F8FA;
     color: black !important; 
     border: 1px solid black;
 }
@@ -176,7 +176,7 @@ body {
 .btn-outline-black:active,
 .btn-outline-black:focus {
     background: black;
-    color: white !important;
+    color: #F9F8FA !important;
 }
 
 .btt-link {
