@@ -1,51 +1,51 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Blog
-from .forms import BlogForm
+from .models import Review
+from .forms import ReviewForm
 from django.utils import timezone
 
 
-def blog_list(request):
-    blogs = Blog.objects.all()
-    return render(request, 'blog/blog.html', {'blogs': blogs})
+def review_list(request):
+    reviews = Review.objects.all()
+    return render(request, 'review/review.html', {'reviews': reviews})
 
 
-def blog_detail(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
-    return render(request, 'blog/article-details.html', {'blog': blog})
+def review_detail(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    return render(request, 'review/article-details.html', {'review': review})
 
 
-def blog_new(request):
-    if request.method == "blog":
-        form = BlogForm(request.blog)
+def review_new(request):
+    if request.method == "review":
+        form = ReviewForm(request.review)
         if form.is_valid():
-            blog = form.save(commit=False)
-            blog.author = request.user
-            blog.published_date = timezone.now()
-            blog.save()
-            return redirect('blog_detail', pk=blog.pk)
+            review = form.save(commit=False)
+            review.author = request.user
+            review.published_date = timezone.now()
+            review.save()
+            return redirect('review_detail', pk=review.pk)
     else:
-        form = BlogForm()
-    return render(request, 'blog/blog_edit.html', {'form': form})
+        form = ReviewForm()
+    return render(request, 'review/review_edit.html', {'form': form})
 
 
-def blog_edit(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
-    if request.method == "blog":
-        form = BlogForm(request.blog, instance=blog)
+def review_edit(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    if request.method == "review":
+        form = ReviewForm(request.review, instance=review)
         if form.is_valid():
-            blog = form.save(commit=False)
-            blog.author = request.user
-            blog.published_date = timezone.now()
-            blog.save()
-            return redirect('blog_detail', pk=blog.pk)
+            review = form.save(commit=False)
+            review.author = request.user
+            review.published_date = timezone.now()
+            review.save()
+            return redirect('review_detail', pk=review.pk)
     else:
-        form = BlogForm(instance=blog)
-    return render(request, 'blog/blog_edit.html', {'form': form})
+        form = ReviewForm(instance=review)
+    return render(request, 'review/review_edit.html', {'form': form})
 
 
-def blog_remove(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
-    blog.delete()
-    return redirect('blog_list')
+def review_remove(request, pk):
+    review = get_object_or_404(Review, pk=pk)
+    review.delete()
+    return redirect('review_list')
 
 

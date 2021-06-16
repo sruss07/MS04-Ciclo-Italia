@@ -1,9 +1,9 @@
 from django import forms
-from .models import Blog
+from .models import Review
 
 
-class BlogForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
 
     class Meta:
-        model = Blog
+        model = Review
         fields = '__all__'

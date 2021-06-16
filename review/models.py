@@ -3,7 +3,7 @@ from django.db import models
 from django.utils import timezone
 
 
-class Blog(models.Model):
+class Review(models.Model):
     author = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE)
