@@ -1,0 +1,1 @@
+web: gunicorn ciclo_italia.wsgi:application
