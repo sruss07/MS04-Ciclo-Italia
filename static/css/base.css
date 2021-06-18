@@ -222,13 +222,9 @@ body {
 }
 
 
-/* -------------------------------- Blog */
+/* -------------------------------- Blog and Reviews */
 
-.comment {
-    margin: 20px 0px 20px 20px;
-}
-
-.blog-list {
+.blog-list .review-list {
     padding: 3%;
 }
 
@@ -300,14 +296,14 @@ footer {
 }
 
 .footer-container {
-    background-color: #64808A;
+    background-color: #F7FAFE;
     padding-top: 30px;
     padding-bottom: 30px;
-    color: #F9F9F9;
+    color: #198754;
 }
 
 .social-links li i {
-    color: #F9F9F9;
+    color: #DC3545;
     padding: 10px;
     font-size: 16px;
 }
