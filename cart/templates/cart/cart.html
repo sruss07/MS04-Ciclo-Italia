@@ -50,7 +50,7 @@
                                     <p><strong>Subtotal: </strong>£{{ item.bike.price | calc_subtotal:item.quantity }}</p>
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <h3>Some text</h3>
+                                    {% include "cart/quantity_form.html" %}
                                 </div>
                             </div>
                             <div class="row"><div class="col"><hr></div></div>
@@ -86,7 +86,7 @@
                                         <p class="my-0">£{{ item.bike.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        {% include "cart/quantity_form.html"with item=item %}
+                                        {% include "cart/quantity_form.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.bike.price | calc_subtotal:item.quantity }}</p>
@@ -127,7 +127,7 @@
         window.scrollTo(0,0)
     })
 </script>
-{% include 'bikes/templates/quantity_script.html' %}
+{% include 'bikes/quantity_script.html' %}
 
 <script>
     // Update quantity on click
