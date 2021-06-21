@@ -6,7 +6,7 @@ class Brand(models.Model):
     class Meta:
         verbose_name_plural = 'Brands'
 
-        ordering = ['-brand__name']
+        # ordering = ['-brand__name']
 
     name = models.CharField(max_length=254)
     frontend_name = models.CharField(
