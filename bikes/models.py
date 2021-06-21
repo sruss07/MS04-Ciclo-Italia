@@ -6,7 +6,6 @@ class Brand(models.Model):
     class Meta:
         verbose_name_plural = 'Brands'
 
-
     name = models.CharField(max_length=254)
     frontend_name = models.CharField(
         max_length=254, null=True, blank=True)
@@ -35,5 +34,5 @@ class Bike(models.Model):
 
 
 Bike.objects.all().order_by(
-    'brand', 'name'
+    'brand__name', 'name'
 )
