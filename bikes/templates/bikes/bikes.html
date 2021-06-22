@@ -82,7 +82,7 @@
                                     {% if bike.brand %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"
-                                            href="{% url 'bikes' %}?category={{ bike.brand.name }}">
+                                            href="{% url 'bikes' %}?brand={{ bike.brand.name }}">
                                             <i class="fas fa-tags"></i>{{ bike.brand.frontend_name }}
                                         </a>
                                     </p>
