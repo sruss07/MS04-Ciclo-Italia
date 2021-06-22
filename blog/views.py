@@ -12,7 +12,7 @@ def blog_list(request):
 
 def blog_detail(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
-    return render(request, 'blog/blog_detail.html', {'blog': blog})
+    return render(request, 'blog/blog_details.html', {'blog': blog})
 
 
 @login_required
