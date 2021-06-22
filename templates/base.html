@@ -57,7 +57,7 @@
                 <!-- Search form -->
                 <form method="GET" action="{% url 'bikes' %}"
                     class="form-inline d-flex justify-content-center md-form form-sm mt-0">
-                    <i class="fas fa-search fa-lg" aria-hidden="true"></i>
+                    <i class="fas fa-search fa-lg text-green" aria-hidden="true"></i>
                     <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
                         aria-label="Search" name="q">
                 </form>
@@ -68,8 +68,8 @@
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <div><i class="fas fa-user fa-lg text-green"></i></div>
+                                <p class="my-0 text-green">My Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -92,8 +92,8 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_cart' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
+                                <div><i class="fas fa-shopping-bag fa-lg text-green"></i></div>
+                                <p class="my-0 text-green">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
                                     {% else %}
