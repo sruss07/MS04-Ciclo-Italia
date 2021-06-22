@@ -11,7 +11,7 @@ def review_list(request):
 
 def review_detail(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    return render(request, 'review/article-details.html', {'review': review})
+    return render(request, 'review/review_details.html', {'review': review})
 
 
 def review_new(request):
@@ -43,7 +43,7 @@ def review_edit(request, pk):
     return render(request, 'review/review_edit.html', {'form': form})
 
 
-def review_remove(request, pk):
+def review_delete(request, pk):
     review = get_object_or_404(Review, pk=pk)
     review.delete()
     return redirect('review_list')
