@@ -69,6 +69,12 @@ body {
     width: fit-content;
 }
 
+.nav-item a:hover{
+    text-decoration: underline;
+    text-decoration-color: #DC3545;
+    text-decoration-thickness: 3px;
+}
+
 
 /* ------------------- Toasts */
 
