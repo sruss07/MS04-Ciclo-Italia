@@ -8,4 +8,3 @@ urlpatterns = [
     path('review/<int:pk>/edit/', views.review_edit, name='review_edit'),
     path('review/<int:pk>delete/', views.review_delete, name='review_delete'),
 ]
-

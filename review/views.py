@@ -48,4 +48,3 @@ def review_delete(request, pk):
     review.delete()
     return redirect('review_list')
 
-
