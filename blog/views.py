@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Blog
 from .forms import BlogForm
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 
 def blog_list(request):
@@ -11,9 +12,10 @@ def blog_list(request):
 
 def blog_detail(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
-    return render(request, 'blog/article-details.html', {'blog': blog})
+    return render(request, 'blog/blog_detail.html', {'blog': blog})
 
 
+@login_required
 def blog_new(request):
     if request.method == "blog":
         form = BlogForm(request.blog)
@@ -28,6 +30,7 @@ def blog_new(request):
     return render(request, 'blog/blog_edit.html', {'form': form})
 
 
+@login_required
 def blog_edit(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
     if request.method == "blog":
@@ -43,9 +46,9 @@ def blog_edit(request, pk):
     return render(request, 'blog/blog_edit.html', {'form': form})
 
 
-def blog_remove(request, pk):
+@login_required
+def blog_delete(request, pk):
     blog = get_object_or_404(Blog, pk=pk)
     blog.delete()
     return redirect('blog_list')
-
 
