@@ -15,8 +15,8 @@ def review_detail(request, pk):
 
 
 def review_new(request):
-    if request.method == "review":
-        form = ReviewForm(request.review)
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
@@ -30,8 +30,8 @@ def review_new(request):
 
 def review_edit(request, pk):
     review = get_object_or_404(Review, pk=pk)
-    if request.method == "review":
-        form = ReviewForm(request.review, instance=review)
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
