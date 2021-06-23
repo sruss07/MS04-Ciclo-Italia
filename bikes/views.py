@@ -13,7 +13,8 @@ def all_bikes(request):
 
     bikes = Bike.objects.all()
     query = None
-    brands = None
+    bike_brands = None
+    bike_name = None
     sort = None
     direction = None
 
@@ -31,11 +32,16 @@ def all_bikes(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             bikes = bikes.order_by(sortkey)
-
+        
         if 'brand' in request.GET:
-            brands = request.GET['brand'].split(',')
-            bikes = bikes.filter(brand__name__in=brands)
-            brands = Brand.objects.filter(name__in=brands)
+            bike_brands = request.GET["brand"].split(',')
+            bikes = bikes.filter(brand__name__in=bike_brands)
+            bike_brands = Brand.objects.filter(name__in=bike_brands)
+
+        if 'bike' in request.GET:
+            bike_name = request.GET['bike']
+            bikes = bikes.filter(name=bike_name)
+            
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -53,7 +59,8 @@ def all_bikes(request):
     context = {
         'bikes': bikes,
         'search_term': query,
-        'current_brands': brands,
+        'current_brands': bike_brands,
+        'current_bike': bike_name,
         'current_sorting': current_sorting,
     }
 
