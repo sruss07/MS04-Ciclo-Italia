@@ -24,10 +24,10 @@ Back to [README.md](https://github.com/lucyrush/rivercity_jewellery#table-of-con
 
 ## Automated Testing
 
-In addition to the full manual testing, I also decided to add some automated testing, as advised in the short testing section of the course. The automated testing can be improved.
-I am not 100% confident with automated testing just yet! 
+In addition to the full manual testing, I created a few automated tests. 
+The automated testing can be improved as I am not 100% confident with automated testing.
 
-I created 11 automated tests in total. These include:
+11 automated tests were created and run. These include:
 - Checkout>tests.py: Order form testing
 - Products>tests.py: Product form testing and Product page view test
 
