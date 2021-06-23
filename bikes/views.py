@@ -32,7 +32,7 @@ def all_bikes(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             bikes = bikes.order_by(sortkey)
-        
+      
         if 'brand' in request.GET:
             bike_brands = request.GET["brand"].split(',')
             bikes = bikes.filter(brand__name__in=bike_brands)
@@ -41,7 +41,7 @@ def all_bikes(request):
         if 'bike' in request.GET:
             bike_name = request.GET['bike']
             bikes = bikes.filter(name=bike_name)
-            
+          
 
         if 'q' in request.GET:
             query = request.GET['q']
