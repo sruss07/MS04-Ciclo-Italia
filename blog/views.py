@@ -16,8 +16,7 @@ def blog_detail(request, pk):
 
 
 @login_required
-def blog_new(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
+def blog_new(request):
     if request.method == "POST":
         form = BlogForm(request.POST)
         if form.is_valid():
@@ -32,10 +31,9 @@ def blog_new(request, pk):
 
 
 @login_required
-def blog_edit(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
+def blog_edit(request):
     if request.method == "POST":
-        form = BlogForm(request.POST, instance=blog)
+        form = BlogForm(request.POST)
         if form.is_valid():
             blog = form.save(commit=False)
             blog.author = request.user
@@ -43,7 +41,7 @@ def blog_edit(request, pk):
             blog.save()
             return redirect('blog_detail', pk=blog.pk)
     else:
-        form = BlogForm(instance=blog)
+        form = BlogForm()
     return render(request, 'blog/blog_edit.html', {'form': form})
 
 

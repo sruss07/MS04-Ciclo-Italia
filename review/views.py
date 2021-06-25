@@ -14,10 +14,9 @@ def review_detail(request, pk):
     return render(request, 'review/review_details.html', {'review': review})
 
 
-def review_new(request, pk):
-    review = get_object_or_404(Review, pk=pk)
+def review_new(request):
     if request.method == "POST":
-        form = ReviewForm(request.POST, instance=review)
+        form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
@@ -29,10 +28,9 @@ def review_new(request, pk):
     return render(request, 'review/review_add.html', {'form': form})
 
 
-def review_edit(request, pk):
-    review = get_object_or_404(Review, pk=pk)
+def review_edit(request):
     if request.method == "POST":
-        form = ReviewForm(request.POST, instance=review)
+        form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
@@ -40,7 +38,7 @@ def review_edit(request, pk):
             review.save()
             return redirect('review_detail', pk=review.pk)
     else:
-        form = ReviewForm(instance=review)
+        form = ReviewForm()
     return render(request, 'review/review_edit.html', {'form': form})
 
 
