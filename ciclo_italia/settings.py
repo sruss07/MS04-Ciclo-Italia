@@ -32,7 +32,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 DEBUG = True
 ALLOWED_HOSTS = ['ciclo-italia.herokuapp.com', 'localhost']
 
-
 # Application definition
 
 INSTALLED_APPS = [
