@@ -86,8 +86,14 @@
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_bike' %}" class="dropdown-item">Product Management</a>
                             <a href="{% url 'review_new' %}" class="dropdown-item">Add a New Bike Review</a>
-                            <a href="{% url 'blog_new' %}" class="dropdown-item">Add a New Blog Post</a>
+                            <a href="{% url 'review_edit' %}" 
+                            class="dropdown-item">Edit a Bike Review</a>
+                            <a href="{% url 'blog_new' %}" 
+                            class="dropdown-item">Add a New Blog Post</a>
+                            <a href="{% url 'blog_edit' %}" 
+                            class="dropdown-item">Edit a Blog Post</a>
                             {% endif %}
+                            
                             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                             {% else %}
