@@ -1,3 +1,11 @@
+<h1 align=center id=top> Ciclo Italia </h2>
+
+Ciclo Italia is an online store offering a selection of the finest Italian road racing bikes!
+
+<h2 align=center id="top"><img src="docs/Ciclo_Italia_responsive_screen_views.png"></h2>
+
+View live project [here](https://ciclo-italia.herokuapp.com/) 
+
 # Table of Contents
 
 **<details><summary>[User Experience (UX)](#user-experience-ux)</summary>**
