@@ -16,14 +16,14 @@
         <div class="col-12 col-md-6">
             <hr>
             <h2 class="logo-font mb-4">Blog Management</h2>
-            <h5 class="text-muted">Edit a Blog Post</h5>
+            <h5 class="text-muted">Add a Blog Post</h5>
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-md-6">
-            <!-- Crispy form to add/edit blog post -->
+            <!-- Crispy form to add blog post -->
             <form method="POST" class="post-form mb-2">
                 {% csrf_token %}
                 {{ form|crispy }}
