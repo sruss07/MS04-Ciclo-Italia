@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Review
 from .forms import ReviewForm
 from django.utils import timezone
+from django.contrib.auth.decorators import login_required
 
 
 def review_list(request):
@@ -14,6 +15,7 @@ def review_detail(request, pk):
     return render(request, 'review/review_details.html', {'review': review})
 
 
+@login_required
 def review_new(request):
     if request.method == "POST":
         form = ReviewForm(request.POST)
@@ -28,6 +30,7 @@ def review_new(request):
     return render(request, 'review/review_add.html', {'form': form})
 
 
+@login_required
 def review_edit(request, pk):
     review = get_object_or_404(Review, pk=pk)
     if request.method == "POST":
@@ -43,6 +46,7 @@ def review_edit(request, pk):
     return render(request, 'review/review_edit.html', {'form': form})
 
 
+@login_required
 def review_delete(request, pk):
     review = get_object_or_404(Review, pk=pk)
     review.delete()
