@@ -10,8 +10,8 @@ def blog_list(request):
     return render(request, 'blog/blog.html', {'blogs': blogs})
 
 
-def blog_detail(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
+def blog_detail(request, blog_pk):
+    blog = get_object_or_404(Blog, blog_pk=blog_pk)
     return render(request, 'blog/blog_details.html', {'blog': blog})
 
 
@@ -31,22 +31,23 @@ def blog_new(request):
 
 
 @login_required
-def blog_edit(request):
+def blog_edit(request, blog_pk):
+    blog = get_object_or_404(Blog, blog_pk=blog_pk)
     if request.method == "POST":
-        form = BlogForm(request.POST)
+        form = BlogForm(request.POST, instance=blog)
         if form.is_valid():
             blog = form.save(commit=False)
             blog.author = request.user
             blog.published_date = timezone.now()
             blog.save()
-            return redirect('blog_detail', pk=blog.pk)
+            return redirect('blog_detail', blog_pk=blog.pk)
     else:
-        form = BlogForm()
+        form = BlogForm(instance=blog)
     return render(request, 'blog/blog_edit.html', {'form': form})
 
 
 @login_required
-def blog_delete(request, pk):
-    blog = get_object_or_404(Blog, pk=pk)
+def blog_delete(request, blog_pk):
+    blog = get_object_or_404(Blog, blog_pk=blog_pk)
     blog.delete()
     return redirect('blog_list')

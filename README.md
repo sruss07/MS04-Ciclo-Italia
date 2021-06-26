@@ -1,6 +1,6 @@
 <h1 align=center id=top> Ciclo Italia </h2>
 
-Ciclo Italia is an online store offering a selection of the finest Italian road racing bikes!
+Ciclo Italia is an online bike store offering a selection of the finest Italian designed road racing bikes!
 
 <h2 align=center id="top"><img src="docs/Ciclo_Italia_responsive_screen_views.png"></h2>
 

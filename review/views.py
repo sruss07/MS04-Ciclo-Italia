@@ -28,9 +28,10 @@ def review_new(request):
     return render(request, 'review/review_add.html', {'form': form})
 
 
-def review_edit(request):
+def review_edit(request, pk):
+    review = get_object_or_404(Review, pk=pk)
     if request.method == "POST":
-        form = ReviewForm(request.POST)
+        form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             review = form.save(commit=False)
             review.author = request.user
@@ -38,7 +39,7 @@ def review_edit(request):
             review.save()
             return redirect('review_detail', pk=review.pk)
     else:
-        form = ReviewForm()
+        form = ReviewForm(instance=review)
     return render(request, 'review/review_edit.html', {'form': form})
 
 
@@ -46,4 +47,5 @@ def review_delete(request, pk):
     review = get_object_or_404(Review, pk=pk)
     review.delete()
     return redirect('review_list')
+
 
