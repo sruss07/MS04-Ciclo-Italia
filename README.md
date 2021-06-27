@@ -81,82 +81,82 @@ View live project [here](https://ciclo-italia.herokuapp.com/)
 
 ### Strategy
 
-The target demographic encompasses riders from 18 upwards who have the desire and finanacil freedom to own a beautiful and finely crafted Italian road bike. 
+The target demographic encompasses riders from 18 upwards who have the desire and finanacil freedom to own a beautiful and finely crafted Italian road bike 
 
-This demographic will include riders of all abilities, from weekend leisure riders, to daily commuters, to serious amateur road racers, semi-professional riders and fully professional team riders.
+This demographic will include riders of all abilities, from weekend leisure riders, to daily commuters, to serious amateur road racers, semi-professional riders and fully professional team riders
 
-Riders purchasing from the site for competitive reasons will most likely be competing in road racing, time trialling, triathlon and cyclocross events.
+Riders purchasing from the site for competitive reasons will most likely be competing in road racing, time trialling, triathlon and cyclocross events
 
-The site attempts to provide to its users an attractive, user friendly experience and functionality, which allows customers to easily find the bike of their dreams at an affordable price.
+The site attempts to provide to its users an attractive, user friendly experience and functionality, which allows customers to easily find the bike of their dreams at an affordable price
 
-Ciclo Italia provides a high quality selection of Italian designed road bikes providing customers with high quality imagery, detailed descriptions, various sizes and colours, customers reviews and competitive pricing, to allow informed decisions before purchases are completed.
+Ciclo Italia provides a high quality selection of Italian designed road bikes providing customers with high quality imagery, detailed descriptions, customer reviews and competitive pricing, to allow informed decisions before purchases are completed
 
-The main strategy of this site to provide accurate information about the products offered, make it easy and intuitive to navigate and transparent with information to maintain trust and integrity with users.
+The main strategy of this site to provide accurate information about the products offered, make it easy and intuitive to navigate and transparent with information to maintain trust and integrity with users
 
 #### Project Goals
 
-To provide customers with a comprehensive, attractive and user friendly site that showcases all the best Italian designed road racing bikes
+To provide customers with a comprehensive, attractive and user friendly site that showcases a selection of the best Italian designed road racing bikes
 
 #### User Goals
 
-Users can easily find their desired bike in the correct size and colour, read reviews on each bike and choose whether to complete a purchase.
+Users can easily find their desired bike, see transparent pricing, read reviews on each bike, and choose whether to complete a purchase
 
 ### Scope
 
-Project eflects my current skill-set of HTML, CSS, JavaScript, Python and Django.
+Project reflects my current skill-set of HTML, CSS, JavaScript, Python and Django
 
-Provide a site with relevant categories, product listings and detail pages, with scope for future expansion
+To provide an app with relevant categories, product listings and detail pages, with scope for future expansion
 
 #### Existing Feature
 
 - Fully responsive website for all common mobile, tablet and desktop devices, using Bootstrap responsive grid and custom media queries
-- Striking home page jumbotron image to convey a positive initial response from to visitors
-- Intuitive and responsive Navigation menu with associated links and search facility
-- Brands link to Brands page containing images and details of available bikes
-- Search function with filtering.
+- Striking home page jumbotron image to convey a positive initial response from visitors
+- Intuitive and responsive Navigation menu with links and search facility
+- Links to all available bikes, each available brand and each available model containing a description and image
+- A filtering function to sort available bikes
+- Registration page with form
 - Login page with form
-- Profile/account page containing personal details, payment details and order history
+- Profile page containing personal details, payment details and order history
+- Cart page with form displaying chosen bike/s
 - Checkout page with payment functionality
-- Reviews page containing customer reviews of products
+- Reviews page containing customer reviews of bikes
 - Blog page containing cycling themed blog posts
+- Project management page for adding, updating and deleting bikes
+- Blog and review add/edit page for adding, updating and deleting blog and review entries
 - Footer element with social media icon links
-- Project management page for adding, updating and deleting products
-- Blog management page for adding, updating and deleting blog entries.
 
 #### Future Features to Implement
 
-- Membership scheme to save on future purchases and a members forum area for sharing cycling information such as routes, holidays, maintenance tips, equipment recommendations etc
+- Membership scheme app to save on future purchases 
+- Members forum app for sharing cycling information such as routes, holidays, maintenance tips, bike recommendations etc
+- Contact app to enable users to contact the site owners to ask questions, give feedback etc
 
 ### Structure
 
-The overall structure is aimed at ease of navigation to each section and an intuitive path from initial arrival on the home page through finding the desired product and finally to a smooth and secure final payment checkout experience
+The overall structure is aimed at ease of navigation to each section and an intuitive path from initial arrival on the home page through finding the desired bike through to a smooth and secure final payment checkout experience
 
 #### Interaction Design
 
-The content has been laid out in an intuiitive way, providing a good flow of information. The home page clearly leads to the brands page where customers can easily browse through all available products. Purchases can be easily made from the brands page through an easy to use payments page 
+The content has been laid out in an intuiitive way, providing a good flow of information. The home page clearly leads to the bikes page where customers can easily browse through all available bikes. Purchases can be easily made from the bikes page through an easy to use cart and checkout payment pages 
 
-Clear feedback is provided to the user after each interaction, using the messages function in Django
+Clear feedback is provided to the user after each interaction, using the messages function in Django and with the use of javascript pop-up toast messages
 
 #### Information Architecture
 
 TBA =========> navigational SCHEMA. ![Site Info Schema]()  
 
-The main organising principle for the user is the brand, with each brand section containing a number of available models
+The main organising principle for the user is the brand. The app contains a total of 6 brands. Each brand contains 4 bike models. This gives the current app a total of 24 bikes available to view
 
-- Search by keyword
+Available bikes can be found by searching by the following methods:
+
 - Search by brand
-- Search by model name
-- Search by size
-- Search by colour
+- Search by bike model name
+- Search by keyword
 
 #### Database
 
 Development - SQLite3
 Production - Heroku Postgres
-
-#### Data Schema
-
-TBA =========
 
 ### Skeleton
 
@@ -172,14 +172,38 @@ TBA =========
 
 The layout has been kept consistent throughout the site with the navigation bar and footer consistemt to all pages
 
-- Top Navigation bar - Menu with links pointing to each page, inluding:
-  - brands page
-  - offers page
-  - reviews page
-  - blog page
-  - login page
-  - profile page
-  - Footer with social media links
+- Top Navigation bar containing the following before a user is logged in:
+  - Ciclo Italia brand logo, providing a site wide link back to the home page
+  - A search bar providing users with a way to search by keyword
+  - My Account link icon with dropdown menu providing links to the register page and login page
+  - Shopping Bag link icon providing access to users shopping cart
+- Top Navigation bar containing the following when a user is logged in:
+  - Ciclo Italia brand logo, providing a site wide link back to the home page
+  - A search bar providing users with a way to search by keyword
+  - My Account link icon with dropdown menu providing links to Product Management for superusers, Add/Edit Bike Reviews, Add/Edit Cycling Blog Post, My Profile and Logout for all users
+  - Shopping Bag link icon providing access for all users to their shopping cart
+
+- Bikes navigation links situated below the search bar:
+  - All Bikes 
+    - link that displays all available bikes
+  - Bianchi   
+    - link to all available Bianchi bikes, including dropdown menu with links to each individual Bianchi model
+  - Cinellii  
+    - link to all available Cinelli bikes, including dropdown menu with links to each individual Cinelli model
+  - Colnago   
+    - link to all available Colnago bikes, including dropdown menu with links to each individual Colnago model
+  - De Rosa   
+    - link to all available De Rosa bikes, including dropdown menu with links to each individual De Rosa model
+  - Pinarello   
+    - link to all available Pinarello bikes, including dropdown menu with links to each individual Pinarello model
+  - Wilier   
+    - link to all available Wilier bikes, including dropdown menu with links to each individual Wilier model
+  - Reviews 
+    - link that displays all existing bike review posts
+  - Blog 
+    - link that displays all existing cycling blog posts
+  
+- Footer with social media links to Facebook, Twitter, Instagram, YouTube and Pinterest
 
   ### Surface
 
@@ -202,10 +226,6 @@ Colour Palette generated on [Coolors.co](https://coolors.co/)
 High quality imagery is vital to convey the beauty of the products to potential customers. High quality images of each bike allow customers to fully appreciate what they will be buying and allows them to make an informed decision before completing a purchase
 
 README icons are hosted on [Cloudinary](https://cloudinary.com/), a cloud-based service that provides an end-to-end image and video management solution
-
-#### Animations
-
-Carousels have been given a delay for soft transitions, a smooth scroll effect enables in-page navigation and buttons have subtle hover and click effects
 
 > [Back to Top](#table-of-contents)  
 
@@ -278,7 +298,11 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ## Bugs
 
+  - When creating new bike reviews and cycling blogs from within the app admin all details render correctly. However, when creating from within the app itself, titles, text, added by and published time details all render correctly but images do not render correctly. I will endevour to solve this issue in the near future.
+
 ### Project barriers and solutions
+
+  - I encountered problems in enabling webhooks to perform as required. I found that purchase confirmation emails were not being sent due to webhook errors.
 
 > [Back to Top](#table-of-contents) 
 
