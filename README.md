@@ -85,19 +85,18 @@ View live project [here](https://ciclo-italia.herokuapp.com/)
 | Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
 | Anonymous user       | search for and view bikes;                                               | quickly browse for different models of bikes                  |
 | Anonymous user       | filter my search results;                                                | search by brand and/or bike model                             |
-| Anonymous user       | read details about each bike;                                            | understand the history, details and needs of the project      |
+| Anonymous user       | read details about each bike;                                            | can read technical details to inform my choice of bike        |
 | Anonymous user       | access Ciclo Italia social media links;                                  | join Ciclo Italia social media sites                          |
 | Anonymous user       | register for a user profile account with a username and password;        | register for an account to allow easy access to site          |
 | Anonymous user       | verify that my registration was successful;                              | receive a confirmation email after registering                |
 |          ---         |                                    ---                                   |                              ---                              |
-| Registered user      | log in and log out of my profile account;                                | safeguard my information when not active on the site          |
+| Registered user      | log in and log out of my profile account;                                | easily enter and leave the site                               |
 | Registered user      | update my shipping, billing and payment details;                         | update address and other details when required                |
 | Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a purchase        |
 | Registered user      | store my purchase history;                                               | access my previous purchases and payments                     |
 | Registered user      | review my purchase choices at checkout;                                  | decide whether to edit purchases before confirming payment    |
-| Registered user      | store my purchases in checkout;                                          | go back to the site if I wish to add more products            |
-| Registered user      | easily make secure payments                                              | ensure my payments are securely handled                       |
-| Registered user      | receive email confirmation of my purchase payment                        | confirm that my payment was processed successfully            |
+| Registered user      | easily make secure payments;                                             | ensure my payments are securely handled                       |
+| Registered user      | receive email confirmation of my purchase payment;                       | confirm that my payment was processed successfully            |
 | Registered user      | create personal bike reviews;                                            | add a personal review of a purchased bike                     |
 | Registered user      | update their personal bike reviews entries;                              | update personal bike reviews if details change                |
 | Registered user      | delete their personal bike reviews entries;                              | remove personal bike review details if they become irrelevant |
@@ -185,6 +184,8 @@ Available bikes can be found by searching by the following methods:
 - Search by brand
 - Search by bike model name
 - Search by keyword
+
+:arrow_up: [Back to Top](#table-of-contents)
 
 #### Database
 
@@ -290,7 +291,7 @@ Colour Palette generated on [Coolors.co](https://coolors.co/)
 
 High quality imagery is vital to convey the beauty of the products to potential customers. High quality images of each bike allow customers to fully appreciate what they will be buying and allows them to make an informed decision before completing a purchase
 
-> [Back to Top](#table-of-contents)  
+:arrow_up: [Back to Top](#table-of-contents)  
 
 ## Technologies Used
 
@@ -368,7 +369,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
   - I encountered problems in enabling webhooks to perform as required. I found that purchase confirmation emails were not being sent due to webhook errors. I discovered that the path within Stripe fior my webhooks was missing a / behind the wh at the end of the path. Once this / was added the webhook test returned a 200 code, indicating all was working as expected
 
-> [Back to Top](#table-of-contents) 
+:arrow_up: [Back to Top](#table-of-contents) 
 
 ## Workflow
 
@@ -506,7 +507,7 @@ Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](ht
 
 #### 7. Remote Deployment on Heroku
 
- [Back to Top](#table-of-contents) 
+:arrow_up: [Back to Top](#table-of-contents) 
 
  ## Testing
 
@@ -548,5 +549,5 @@ I would like to thank:
 - Everyone on Tutor Support for giving invaluable help, advice and assistance with my many questions
 - **CI staff** and **Slack Community** for always being on-hand to answer my questions
 
-> [Back to Top](#table-of-contents) 
+:arrow_up: [Back to Top](#table-of-contents) 
 
