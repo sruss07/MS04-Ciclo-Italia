@@ -270,7 +270,7 @@ The layout has been kept consistent throughout the site with the navigation bar 
   
 - Footer with social media links to Facebook, Twitter, Instagram, YouTube and Pinterest
 
-  ### Surface
+### Surface
 
 The overall UX aligns with the design priciples of a modern online bike store type site. The overall feel needs to give confidence to customers that they are purchasing from a professional organisation 
 
