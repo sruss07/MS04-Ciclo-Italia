@@ -77,7 +77,41 @@ View live project [here](https://ciclo-italia.herokuapp.com/)
 
 ### User Stories
 
-
+|      As a/an...      |                         I want the ability to...                         |                        So that I can...                       |
+|:--------------------:|:------------------------------------------------------------------------:|:-------------------------------------------------------------:|
+|                      |                                                                          |                                                               |
+|          ---         |                                    ---                                   |                              ---                              |
+| Anonymous user       | easily navigate the site;                                                | find what I am looking for quickly                            |
+| Anonymous user       | view the site on all screen sizes;                                       | visit the site using my mobile and/or tablet device           |
+| Anonymous user       | search for and view bikes;                                               | quickly browse for different models of bikes                  |
+| Anonymous user       | filter my search results;                                                | search by brand and/or bike model                             |
+| Anonymous user       | read details about each bike;                                            | understand the history, details and needs of the project      |
+| Anonymous user       | access Ciclo Italia social media links;                                  | join Ciclo Italia social media sites                          |
+| Anonymous user       | register for a user profile account with a username and password;        | register for an account to allow easy access to site          |
+| Anonymous user       | verify that my registration was successful;                              | receive a confirmation email after registering                |
+|          ---         |                                    ---                                   |                              ---                              |
+| Registered user      | log in and log out of my profile account;                                | safeguard my information when not active on the site          |
+| Registered user      | update my shipping, billing and payment details;                         | update address and other details when required                |
+| Registered user      | store my address for later use;                                          | avoid having to retype it every time I make a purchase        |
+| Registered user      | store my purchase history;                                               | access my previous purchases and payments                     |
+| Registered user      | review my purchase choices at checkout;                                  | decide whether to edit purchases before confirming payment    |
+| Registered user      | store my purchases in checkout;                                          | go back to the site if I wish to add more products            |
+| Registered user      | easily make secure payments                                              | ensure my payments are securely handled                       |
+| Registered user      | receive email confirmation of my purchase payment                        | confirm that my payment was processed successfully            |
+| Registered user      | create personal bike reviews;                                            | add a personal review of a purchased bike                     |
+| Registered user      | update their personal bike reviews entries;                              | update personal bike reviews if details change                |
+| Registered user      | delete their personal bike reviews entries;                              | remove personal bike review details if they become irrelevant |
+|          ---         |                                    ---                                   |                              ---                              |
+| Site admin/superuser | add new bike listings;                                                   | continuously make new bikes available for purchase            |
+| Site admin/superuser | update existing bike listings;                                           | revise existing bike listings with new information            |
+| Site admin/superuser | delete existing bike listings;                                           | delete bikes that may no longer be available                  |
+| Site admin/superuser | create cycling blogs;                                                    | inform users of news in the cycling world                     |
+| Site admin/superuser | update cycling blog entries;                                             | update users on new developments on previous blogs            |
+| Site admin/superuser | delete cycling blog entries;                                             | remove blog details if they become irrelevant                 |
+| Site admin/superuser | create bike reviews;                                                     | add a review of a purchased bike                              |
+| Site admin/superuser | update bike reviews entries;                                             | update bike reviews if details change                         |
+| Site admin/superuser | delete bike reviews entries;                                             | remove bike review details if they become irrelevant          |
+|                      |                                                                          |                                                               |
 
 ### Strategy
 
@@ -130,6 +164,7 @@ To provide an app with relevant categories, product listings and detail pages, w
 - Membership scheme app to save on future purchases 
 - Members forum app for sharing cycling information such as routes, holidays, maintenance tips, bike recommendations etc
 - Contact app to enable users to contact the site owners to ask questions, give feedback etc
+- Create the appropriate Ciclo Italia social media sites
 
 ### Structure
 
@@ -141,9 +176,7 @@ The content has been laid out in an intuiitive way, providing a good flow of inf
 
 Clear feedback is provided to the user after each interaction, using the messages function in Django and with the use of javascript pop-up toast messages
 
-#### Information Architecture
-
-TBA =========> navigational SCHEMA. ![Site Info Schema]()  
+#### Information Architecture  
 
 The main organising principle for the user is the brand. The app contains a total of 6 brands. Each brand contains 4 bike models. This gives the current app a total of 24 bikes available to view
 
@@ -158,17 +191,49 @@ Available bikes can be found by searching by the following methods:
 Development - SQLite3
 Production - Heroku Postgres
 
+#### Apps and Models used
+
+- Bikes App
+
+  - The **Bike model** stores information about the all available bikes within each brand
+
+  - The **Brand model** stores information about each brand of bike that is available
+
+- Profiles App
+
+  - The **UserProfile** model stores information about registered users, including shipping and billing address, payment details and purchase history
+
+- Checkout App
+
+  - The **Order** model stores information about each purchase order placed
+
+  - The **OrderLineItem** model stores information from the order, used in calculation in the Order model
+
+- Blog App
+
+  - The **Blog** model stores information about cycling blog posts
+
+- Review App
+
+  - The **Review** model stores information about bike review posts
+
+#### Model Relationship Data Schema
+
+![DB Schema](docs/ms4_database_structure.png)
+
 ### Skeleton
 
 #### Page Structure
 
-![page structure diagram](docs/wireframes/)
+![page structure diagram](docs/ms4_site_structure.png)
 
 #### Wireframes
 
-[MOBILE WIREFRAMES](docs/wireframes/)
-[TABLET WIREFRAMES](docs/wireframes/)
-[DESKTOP WIREFRAMES](docs/wireframes/)
+My app design has evolved since I first created my wireframes. The overall structural idea I originally had is still, to some extent, visible in my final app
+
+- [MOBILE WIREFRAMES](docs/wireframes/ms4_mobile_wireframes.png)
+- [TABLET WIREFRAMES](docs/wireframes/ms4_tablet_wireframes.png)
+- [DESKTOP WIREFRAMES](docs/wireframes/ms4_desktop_wireframes.png)
 
 The layout has been kept consistent throughout the site with the navigation bar and footer consistemt to all pages
 
@@ -215,7 +280,7 @@ Colour palette has been chosen to reflect the Italian origins of the bikes that 
 
 Colour Palette generated on [Coolors.co](https://coolors.co/)
 
-![Colour palette](static/images/.png
+![Colour palette](docs/ms4_color_palette.png)
 
 #### Typography
 
@@ -225,8 +290,6 @@ Colour Palette generated on [Coolors.co](https://coolors.co/)
 
 High quality imagery is vital to convey the beauty of the products to potential customers. High quality images of each bike allow customers to fully appreciate what they will be buying and allows them to make an informed decision before completing a purchase
 
-README icons are hosted on [Cloudinary](https://cloudinary.com/), a cloud-based service that provides an end-to-end image and video management solution
-
 > [Back to Top](#table-of-contents)  
 
 ## Technologies Used
@@ -235,37 +298,37 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 ### Languages
 
-![Image](https://res.cloudinary.com/.png) [HTML5](https://en.wikipedia.org/wiki/HTML5)
+[HTML5](https://en.wikipedia.org/wiki/HTML5)
 
-![Image](https://res.cloudinary.com/.png) [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+[CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
-![Image](https://res.cloudinary.com/.png) [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-![Image](https://res.cloudinary.com/.png) [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+[Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
 ### Integration
 
-![Image](https://res.cloudinary.com/.png) [Bootstrap](https://getbootstrap.com/) - by linking via [Bootstrap CDN](https://www.bootstrapcdn.com/) to HTML Doc
+[Bootstrap](https://getbootstrap.com/) - by linking via [Bootstrap CDN](https://www.bootstrapcdn.com/) to HTML Doc
 
-![Image](https://res.cloudinary.com/.png) [FontAwesome](https://fontawesome.com/) Icons for Social Media links
+[FontAwesome](https://fontawesome.com/) Icons for Social Media links
 
-![Image](https://res.cloudinary.com/.png) [Google Fonts](https://fonts.google.com/) - Overall Typography import
+[Google Fonts](https://fonts.google.com/) - Overall Typography import
 
-![Image](https://res.cloudinary.com/.png) [jQuery](https://jquery.com/) - JavaScript library
+[jQuery](https://jquery.com/) - JavaScript library
 
-![Image](https://res.cloudinary.com/.png) [Django](----------------------) Micro web framework written in Python
+[Django](https://www.djangoproject.com/) Micro web framework written in Python
 
 ### Tools
 
-![VSCode logo](https://res.cloudinary.com/.png) [VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
+[VSCode](https://code.visualstudio.com/) - Main workspace IDE (Integrated Development Environment)
 
-![Git logo](https://res.cloudinary.com/.png) [Git](https://git-scm.com/) - Distributed Version Control tool to store versions of files and track changes
+[Git](https://git-scm.com/) - Distributed Version Control tool to store versions of files and track changes
 
-![GitHub logo](https://res.cloudinary.com/.png) [GitHub](https://github.com/) - A cloud-based hosting service to manage Git repositories
+[GitHub](https://github.com/) - A cloud-based hosting service to manage Git repositories
 
-![Heroku logo](https://res.cloudinary.com/.png) [Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
+[Heroku](https://heroku.com) - Container-based cloud platform for deployment and running of apps
 
-![AWS logo](https://res.cloudinary.com/.png) [AWS S3](https://aws.amazon.com/s3/) - Cloud storage for static and media files
+[AWS S3](https://aws.amazon.com/s3/) - Cloud storage for static and media files
 
 ### IDE Extensions
 
@@ -292,17 +355,18 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 - [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
 - [Affinity Photo](https://affinity.serif.com/en-gb/photo/) - Image manipulation and colour corrections
-- [PDF Tools](https://tools.pdf24.org/en/) for wireframe PDF compression
 
 > [Back to Top](#table-of-contents) 
 
 ## Bugs
 
-  - When creating new bike reviews and cycling blogs from within the app admin all details render correctly. However, when creating from within the app itself, titles, text, added by and published time details all render correctly but images do not render correctly. I will endevour to solve this issue in the near future.
+### Known Issues
 
-### Project barriers and solutions
+  - When creating new bike reviews and cycling blogs from within the app admin all details render correctly. However, when creating from within the app itself, titles, text, added by and published time details all render correctly but images do not render correctly. I will endevour to solve this issue in the near future
 
-  - I encountered problems in enabling webhooks to perform as required. I found that purchase confirmation emails were not being sent due to webhook errors.
+### Project Barriers and Solutions
+
+  - I encountered problems in enabling webhooks to perform as required. I found that purchase confirmation emails were not being sent due to webhook errors. I discovered that the path within Stripe fior my webhooks was missing a / behind the wh at the end of the path. Once this / was added the webhook test returned a 200 code, indicating all was working as expected
 
 > [Back to Top](#table-of-contents) 
 
