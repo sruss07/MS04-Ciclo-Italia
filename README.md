@@ -1,6 +1,9 @@
-<h1 align=center id=top> Ciclo Italia </h2>
+<h1 align=center id=top> Ciclo Italia </h1>
+
+# Project Overview
 
 Ciclo Italia is an online bike store offering a selection of the finest Italian designed road racing bikes!
+Offering the best quality bikes from iconic Italian brands, Bianchi, Cinelli, Colnago, De Rosa , Pinarello and Wilier
 
 <h2 align=center id="top"><img src="docs/Ciclo_Italia_responsive_screen_views.png"></h2>
 
@@ -66,9 +69,6 @@ View live project [here](https://ciclo-italia.herokuapp.com/)
 - [Code Snippets](#code-snippets)
 - [Acknowledgments](#acknowledgments)
 
-</details>
-
-**<details><summary>[Support](#support)</summary>**
 </details>
 
 ---
