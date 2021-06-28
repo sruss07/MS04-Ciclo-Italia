@@ -1,4 +1,4 @@
-![Header](header.JPG)
+![Header](ms04_testing_header.png)
 
 **Table of Contents**
 
@@ -18,7 +18,7 @@
   - [Checkout](#checkout)
   - [Blog](#blog)
  
-Back to [README.md](https://github.com/lucyrush/rivercity_jewellery#table-of-contents)
+Back to [README.md](https://github.com/sruss07/MS04-Ciclo-Italia/blob/master/README.md)
 
 # Code Testing
 
@@ -29,7 +29,7 @@ The automated testing can be improved as I am not 100% confident with automated 
 
 11 automated tests were created and run. These include:
 - Checkout>tests.py: Order form testing
-- Products>tests.py: Product form testing and Product page view test
+- Bikes>tests.py: Bike form testing and Bikes page view test
 
 - In the terminal type the following command:
   `python manage.py test <<app name>>`
@@ -39,34 +39,51 @@ The automated testing can be improved as I am not 100% confident with automated 
 
 [W3C Markup Validation](https://validator.w3.org/nu/#textarea)
 
-- HTML 
-    - No errors were returned 
-  
-- CSS
-    - No errors or warnings displayed
+### HTML 
+
+### Entire app html
+
+- No errors were returned
+
+![HTML](ms4_html_validation.png)
+
+### CSS
+
+### base.css
+
+- 1 error was returned 
+    - This error relates to the underline effect when clicking on navbar links and dropdown menu links. The error states that the 'property text-decoration-thickness doesn't exist'. I have chosen to ignore this errror as the css is causing no problems with running the app and the css provides the desired underline effect that was intended
+
+![Base.css](base_css_validator_results.png)
+
+### checkout.css
+
+- No errors were returned
+
+![Checkout.css](checkout_css_validator_results.png)
+
+### profile.css
+
+- No errors were returned
+
+![Profile.css](profile_css_validator_results.png)
 
  [JSHINT](https://jshint.com/)
 
  - When run through the [JSHint validator](https://jshint.com/) these metrics were returned:
- - There are 5 functions in this file.
- - Function with the largest signature take 1 arguments, while the median is 1.
- - Largest function has 10 statements in it, while the median is 5.
- - The most complex function has a cyclomatic complexity value of 3 while the median is 1.
  
-[Python PEP8](https://pypi.org/project/autopep8/)
+### main.js
 
-- The autopep8 extension was installed in the workspace.
+![Main.css](ms4_main_js_results.png)
 
-- To install this enter this in the terminal:
-  - `pip3 install --upgrade autopep8`
+### countryfield.js
 
-- Each and every .py file has been check over to make sure it complies with PEP8 formatting rules, both manually in the Gitpod window, as well as running the code through http://pep8online.com/.
+![CountryField.css](ms4_countryField_js_results.png)
 
-There are no errors through the PEP8 check. However, there are a couple of highlighted rows of code where I have decided not to make the suggested corrections:
- - ‘Avoid using null=True on string based fields.’ Pages with error: Blog>models.py & products>models.py I have left this error as it is a string path to a source file.
- - ‘Avoid using null=True on string based fields.’ Pages with error: checkout>models.py, profiles>models.py, product>models.py
- - ‘Line too long’ Pages with error: settings.py, checkout>webhooks.py, checkout>webhook_handler.py, checkout>models.py These have been left as is as these lines should not be broken.
+### stripe.js
 
+![Stripe.css](ms4_stripe_js_results.png)
+ 
  # User Story Testing
 
 ## As a site user, I want to be able to:
