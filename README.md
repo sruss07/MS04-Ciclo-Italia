@@ -383,16 +383,14 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 > [Back to Top](#table-of-contents) 
 
-## Deployment
-
 ### Local Installation
 
 #### 1. Cloning the project
 
-- The code can be run locally through clone or download from the repository on [GitHub](https://github.com/sruss07/MS04-Ciclo-Italia).
+- The code can be run locally through clone or download from the repository on [GitHub](https://github.com/sruss07/MS04-Ciclo-Italia)
 - You can do this by opening the repository, clicking on the Code' button and selecting either 'clone or download'
 
-    ![Image](static/images/clone.png)
+    ![Image](docs/ms4_clone.png)
 - The Clone option provides a URL, which you can use on your CLI with `git clone <paste url>`.
 - The Download ZIP option provides a link to download a ZIP file which can be unzipped on your local machine. The files can then be uploaded to your IDE
 
@@ -406,7 +404,35 @@ In the Terminal window:
 
 #### 3. Create Environmental Variables
 
-TBA =========
+- For sensitive information/passwords, create an `env.py` file to store these as environmental variables
+
+```python
+import os
+
+os.environ['DEVELOPMENT'] = 'True'
+
+# Django Secret key - ensure you remove from 
+# main>settings.py before pushing to your repository
+os.environ['SECRET_KEY'] = '<your value>'
+
+# stripe
+os.environ['STRIPE_PUBLIC_KEY'] ='<your value>'
+os.environ['STRIPE_SECRET_KEY'] ='<your value>'
+os.environ['STRIPE_WH_SECRET'] = '<your value>'
+
+# DB
+os.environ['DATABASE_URL'] ='<your value>'
+
+# AWS S3
+os.environ['AWS_ACCESS_KEY_ID'] = '<your value>'
+os.environ['AWS_SECRET_ACCESS_KEY'] = '<your value>'
+
+# Email
+os.environ['DEFAULT_FROM_EMAIL'] = '<your value>'
+os.environ['EMAIL_HOST_USER'] = '<your value>'
+os.environ['EMAIL_HOST_PASSWORD'] = '<your value>'
+
+```
 
 #### 4. Create a .gitignore file
 
@@ -416,24 +442,67 @@ TBA =========
     core.Microsoft*
     core.mongo*
     core.python*
-    env.py
     __pycache__/
     *.py[cod]
-    venv
-    .vscode
+    node_modules/
     *.sqlite3
-    *.pyc
+    *.__pyc
+    env.py
 ```
 
 #### 5. Install project dependencies
 
 - Install project requirements by typing `pip install -r requirements.txt`
 
-#### 6. Deploy locally
+#### 6. Migrate
+
+- Apply model migrations useing `python manage.py migrate`
+
+#### 7. Create a SuperUser account
+
+- Type `python manage.py createsuperuser` and follow the username and passwords prompts from the terminal
+
+#### 8. Deploy locally
 
 - To run the project locally, in the terminal type `python manage.py runserver`
 - This will open a localhost address, which is provided in the CLI.
 - Either copy and paste the url shown below into a new browser tab, or hover over it and click *follow link*
+
+## Deployment
+
+This project has been deployed to [HEROKU](https://www.heroku.com/)
+
+Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](https://docs.aws.amazon.com/AmazonS3/latest/userguide/GetStartedWithS3.html)
+
+### Deployment Instructions
+
+1. [Sign up](https://signup.heroku.com/login) for an account on Heroku or [Log in](https://id.heroku.com/login) with your existing account
+
+2. Click on the 'New' dropdown box and 'Create new app'
+![Create app on Heroku screenshot](docs/heroku_create_app_01.png)
+
+3. Name your app, choose the appropriate region and submit
+![Naming app screenshot](docs/heroku_name_app_02.png)
+
+4. On the Resources tab , search for Heroku Postgres Database and add (*a free Hoby Dev account can be used*)
+
+5. Postgres requires dj_database_url, and psycopg2, which will be installed when the requirements.txt dependencies are installed as explained earlier
+
+6. Click on the Deploy tab and select the GitHub option, then choose you GitHub account and search for the repository to connect to (*You can enter a keyword in the input to search for*). Once confirmed, press 'Connect'
+![Connect GitHub sceenshot](docs/heroku_connect_github_03.png)
+
+7. Under Manual deploy, choose your main (or sometime called master) branch to deploy to and press 'Deploy Branch'
+![Manual deploy screenshot](docs/heroku_manual_deploy_04.png)
+
+8. Once the build has completed, under Automatic deploys, choose your main (or sometime called master) branch and press 'Enable Automatic Deploys'
+![Automatic deploy screenshot](docs/heroku_auto_deploy_05.png)
+
+9. Click on the Settings tab and then the 'Reveal Config Vars' button to reveal the Environmental Variables
+![Config Vars reveal button screenshot](docs/heroku_reveal_config_vars_06.png)
+
+10. Enter your Environmental variables and values with the following fields:
+![Config Vars screenshot](docs/heroku_config_vars_07.png)
+
 
 #### 7. Remote Deployment on Heroku
 
@@ -441,7 +510,7 @@ TBA =========
 
  ## Testing
 
-TBA =========> Testing documentation can be found on a separate document [HERE](static/testing/TESTING.md)
+Testing documentation can be found on a separate document [HERE](docs/TESTING.md)
 
 ## Credits
 
@@ -461,23 +530,23 @@ TBA =========> Testing documentation can be found on a separate document [HERE](
 
 ### Media
 
-- Site images used are from .
-- Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
-
-### Content
-
-All content is self-written by site creator.
-
-### Code Snippet
-
+- Site images used are from the respective bike manufacturers websites:
+  - [Bianchi](https://www.bianchi.com/)
+  - [Cinelli](https://cinelli.it/en/)
+  - [Colnago](https://www.colnago.com/en/)
+  - [De Rosa](https://derosa.it/)
+  - [Pinarello](https://pinarello.com/uk/en)
+  - [Wilier](https://wilier.com/en)
 
 ## Acknowledgments
 
 I would like to thank:
 
-- My mentor, **Gerard McBride** for his guidance and advice
-- Everyone in Tutor support for always being patient and friendly when approaching with assistance during course material
-- **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests
+- **Gerard McBride**, my mentor, for his guidance and advice throughout this project
+- **Thomas Muat** for all his help on Slack with my many cries for help!!
+- **Chris Zielinski** who's vast knowledge helped me out of a situation where my app wasn't working at all
+- Everyone on Tutor Support for giving invaluable help, advice and assistance with my many questions
+- **CI staff** and **Slack Community** for always being on-hand to answer my questions
 
 > [Back to Top](#table-of-contents) 
 
