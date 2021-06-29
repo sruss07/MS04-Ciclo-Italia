@@ -185,7 +185,7 @@ Available bikes can be found by searching by the following methods:
 - Search by bike model name
 - Search by keyword
 
-:arrow_up: [Back to Top](#table-of-contents)
+[Back to Top](#table-of-contents)
 
 #### Database
 
@@ -291,7 +291,7 @@ Colour Palette generated on [Coolors.co](https://coolors.co/)
 
 High quality imagery is vital to convey the beauty of the products to potential customers. High quality images of each bike allow customers to fully appreciate what they will be buying and allows them to make an informed decision before completing a purchase
 
-:arrow_up: [Back to Top](#table-of-contents)  
+[Back to Top](#table-of-contents)  
 
 ## Technologies Used
 
@@ -357,7 +357,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 - [Favicon](https://favicon.io/favicon-converter/) - Favicon Generator
 - [Affinity Photo](https://affinity.serif.com/en-gb/photo/) - Image manipulation and colour corrections
 
-> [Back to Top](#table-of-contents) 
+[Back to Top](#table-of-contents) 
 
 ## Bugs
 
@@ -372,7 +372,7 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
   - I encountered problems in enabling webhooks to perform as required. I found that purchase confirmation emails were not being sent due to webhook errors. I discovered that the path within Stripe fior my webhooks was missing a / behind the wh at the end of the path. Once this / was added the webhook test returned a 200 code, indicating all was working as expected
 
-:arrow_up: [Back to Top](#table-of-contents) 
+[Back to Top](#table-of-contents) 
 
 ## Workflow
 
@@ -384,8 +384,6 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 
 - All code was written on [Visual Studio Code](https://code.visualstudio.com/), within the Github environment
 - The code was then pushed to GitHub where it is stored in my [Repository](https://github.com/sruss07/MS04-Ciclo-Italia)
-
-> [Back to Top](#table-of-contents) 
 
 ### Local Installation
 
@@ -510,7 +508,7 @@ Media files are hosted on AWS S3 Bucket, and instructions can be found [HERE](ht
 
 #### 7. Remote Deployment on Heroku
 
-:arrow_up: [Back to Top](#table-of-contents) 
+[Back to Top](#table-of-contents) 
 
  ## Testing
 
@@ -552,5 +550,5 @@ I would like to thank:
 - Everyone on Tutor Support for giving invaluable help, advice and assistance with my many questions
 - **CI staff** and **Slack Community** for always being on-hand to answer my questions
 
-:arrow_up: [Back to Top](#table-of-contents) 
+[Back to Top](#table-of-contents) 
 
