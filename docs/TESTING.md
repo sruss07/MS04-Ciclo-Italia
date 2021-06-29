@@ -1,22 +1,22 @@
 ![Header](ms04_testing_header.png)
 
-**Table of Contents**
+# Table of Contents
 
 1. [Code Testing](#code-testing)
   - [Automated Testing](#automated-testing)
   - [Validator Testing](#validator-testing)
 2. [User Story Testing](#user-story-testing)
 3. [Manual Testing](#manual-testing)
-  - [Lighthouse](#lighthouse)
   - [Responsive Testing](#responsive-testing)
 4. [Usability Testing](#usability-testing)
 5. [Defensive Design](#defensive-design)
   - [Navbar](#navbar)
   - [Footer](#footer)
   - [Login/Signup](#login/signup)
-  - [Products](#products)
+  - [Bikes](#bikes)
   - [Checkout](#checkout)
   - [Blog](#blog)
+  - [Reviews](#reviews)
  
 Back to [README.md](https://github.com/sruss07/MS04-Ciclo-Italia/blob/master/README.md)
 
@@ -83,6 +83,8 @@ The automated testing can be improved as I am not 100% confident with automated 
 ### stripe.js
 
 ![Stripe.css](ms4_stripe_js_results.png)
+
+[Back to Top](#table-of-contents) 
  
  # User Story Testing
 
@@ -150,118 +152,117 @@ The automated testing can be improved as I am not 100% confident with automated 
 - Delete bike review entries
     - Site admin/superuser is able to easily delete existing bike reviews by using the add/edit bike review link located within the my account dropdown menu
 
-
-:arrow_up: [Back to top](#code-testing)
+[Back to Top](#table-of-contents) 
 
 # Manual Testing
-
-## Lighthouse 
-
-- An audit was completed using Lighthouse on the Rivercity jewellery. 
-- Quite a low performance but upon completing audits of several other websites, such as: 
-    - [Code Like a Girl](https://code.likeagirl.io/) 
-    - [Medium](https://medium.com/) 
-
-I learned that higher markings in Accessibility, Best Practices & SEO were more frequent than having a high-performance rating.
-
-![Lighthouse](lighthouse.JPG)
 
 ## Responsive testing
 
 ### Desktop Testing
 
-| Page          | Responsive    | Notes |
-| :------------- |:-------------:| :---------------:|
-| Index     | Y    | Fully Responsive. No horizontal scrollbar.  |
-| Products      |    Y   | Fully Responsive. No horizontal scrollbar.   |
-| Product Details |    Y   |  Fully Responsive. No horizontal scrollbar. The Image is rather large   |
-| Shopping Bag |   Y   | Fully Responsive. No horizontal scrollbar. Easy to read   |
-| Checkout |    Y  | Fully Responsive. No horizontal scrollbar.     |
-| Checkout Successful |    Y   |   Fully Responsive. No horizontal scrollbar. Checkout success message is helpful |
-| Blog |   Y  | Fully Responsive. No horizontal scrollbar. Blog posts are easily distinguisable    |
-| Blog Details|   Y   | Fully Responsive. No horizontal scrollbar. Easy to read commet secton    |
-| Sign Up |   Y    |   Fully Responsive. No horizontal scrollbar. Footer is not fixed to bottom  |
-| Login |    Y   |   Fully Responsive. No horizontal scrollbar. Footer isn't fixed to bottom  |
+| Page                | Responsive    | Notes                                                                            |
+| :-----------------: |:-------------:|:--------------------------------------------------------------------------------:|
+| Home                |    Y          | Fully Responsive. No horizontal scrollbar.                                       |
+| Bikes               |    Y          | Fully Responsive. No horizontal scrollbar. Bike images render correctly          |
+| Bike Details        |    Y          | Fully Responsive. No horizontal scrollbar. Bike images render correctly          |
+| Shopping Cart       |    Y          | Fully Responsive. No horizontal scrollbar. All details easy to read              |
+| Checkout            |    Y          | Fully Responsive. No horizontal scrollbar. All details easy to read              |
+| Checkout Success    |    Y          | Fully Responsive. No horizontal scrollbar. Checkout success message is helpful   |
+| Blog                |    Y          | Fully Responsive. No horizontal scrollbar. Blog posts are easy to read           |
+| Blog Details        |    Y          | Fully Responsive. No horizontal scrollbar. Blog post details are easy to read    |
+| Reviews             |    Y          | Fully Responsive. No horizontal scrollbar. Review posts are easy to read         |
+| Review Details      |    Y          | Fully Responsive. No horizontal scrollbar. Review post details are easy to read  |
+| Sign Up             |    Y          | Fully Responsive. No horizontal scrollbar. All information is easy to read       |
+| Login               |    Y          | Fully Responsive. No horizontal scrollbar. All information is easy to read       |
+| Profile             |    Y          | Fully Responsive. No horizontal scrollbar. Profile information easy to read      |   
 
 ### Tablet Testing
 
-| Page          | Responsive    | Notes |
-| ------------- |:-------------:| :-----:|
-| Index      | Y | Fully responsive, no horizontal scrollbar  |
-| Products      |   Y    |  Fully responsive, no horizontal scrollbar. 2 products per row work well  |
-| Product Details |  Y     |   Fully responsive, no horizontal scrollbar. Product details easy to read  |
-| Shopping Bag |   Y   |   Fully responsive, no horizontal scrollbar   |
-| Checkout |    Y  |   Fully responsive, no horizontal scrollbar   |
-| Checkout Successful |  Y     |  Fully responsive, no horizontal scrollbar   |
-| Blog |  Y   |   Fully responsive, no horizontal scrollbar. Blog post easy to read  |
-| Blog Details|  Y    |   Fully responsive, no horizontal scrollbar. Comment section easy to read  |
-| Sign Up |  Y     |   Fully responsive, no horizontal scrollbar   |
-| Login |  Y     |   Fully responsive, no horizontal scrollbar   |
+| Page                | Responsive    | Notes                                                                            |
+| :-----------------: |:-------------:|:--------------------------------------------------------------------------------:|
+| Home                |    Y          | Fully Responsive. No horizontal scrollbar.                                       |
+| Bikes               |    Y          | Fully Responsive. No horizontal scrollbar. Bike images render correctly          |
+| Bike Details        |    Y          | Fully Responsive. No horizontal scrollbar. Bike images render correctly          |
+| Shopping Cart       |    Y          | Fully Responsive. No horizontal scrollbar. All details easy to read              |
+| Checkout            |    Y          | Fully Responsive. No horizontal scrollbar. All details easy to read              |
+| Checkout Success    |    Y          | Fully Responsive. No horizontal scrollbar. Checkout success message is helpful   |
+| Blog                |    Y          | Fully Responsive. No horizontal scrollbar. Blog posts are easy to read           |
+| Blog Details        |    Y          | Fully Responsive. No horizontal scrollbar. Blog post details are easy to read    |
+| Reviews             |    Y          | Fully Responsive. No horizontal scrollbar. Review posts are easy to read         |
+| Review Details      |    Y          | Fully Responsive. No horizontal scrollbar. Review post details are easy to read  |
+| Sign Up             |    Y          | Fully Responsive. No horizontal scrollbar. All information is easy to read       |
+| Login               |    Y          | Fully Responsive. No horizontal scrollbar. All information is easy to read       |
+| Profile             |    Y          | Fully Responsive. No horizontal scrollbar. Profile information easy to read      | 
 
 ### Mobile testing
 
-| Page          | Responsive    | Notes |
-| :-------------: |:-------------:| :-----:|
-| Index      | Y| Fully Responsive, footer looks nice |
-| Products      |   Y    |  Fully responsive there is noticable whitespace above header. Images better size |
-| Product Details |  Y     |   Fully responsive, added product to bad, success message works well  |
-| Shopping Bag |    Y  |   Fully responsive with totals at the top of the page for easy reading  |
-| Checkout |   Y   |  Fully responsive, order summary and checkout form works well. Country easy to select on iPhone. Card details easy to enter with number pad on iPhone   |
-| Checkout Successful |   Y    | Fully responsive,  success message easily read. Buttons to blog responsive |
-| Blog |   Y  |   Fully responsive, easy to see which post I would like to read  |
-| Blog Details|    Y  |  Fully responsive, article read, image a good size, comment section responsive   |
-| Sign Up |   Y    |  Fully responsive , no horizontal scrollbar   |
-| Login |    Y   |  Fully responsive, no horizontal scrollbar   |
+| Page                | Responsive    | Notes                                                                            |
+| :-----------------: |:-------------:|:--------------------------------------------------------------------------------:|
+| Home                |    Y          | Fully Responsive. No horizontal scrollbar.                                       |
+| Bikes               |    Y          | Fully Responsive. No horizontal scrollbar. Bike images render correctly          |
+| Bike Details        |    Y          | Fully Responsive. No horizontal scrollbar. Bike images render correctly          |
+| Shopping Cart       |    Y          | Fully Responsive. No horizontal scrollbar. All details easy to read              |
+| Checkout            |    Y          | Fully Responsive. No horizontal scrollbar. All details easy to read              |
+| Checkout Success    |    Y          | Fully Responsive. No horizontal scrollbar. Checkout success message is helpful   |
+| Blog                |    Y          | Fully Responsive. No horizontal scrollbar. Blog posts are easy to read           |
+| Blog Details        |    Y          | Fully Responsive. No horizontal scrollbar. Blog post details are easy to read    |
+| Reviews             |    Y          | Fully Responsive. No horizontal scrollbar. Review posts are easy to read         |
+| Review Details      |    Y          | Fully Responsive. No horizontal scrollbar. Review post details are easy to read  |
+| Sign Up             |    Y          | Fully Responsive. No horizontal scrollbar. All information is easy to read       |
+| Login               |    Y          | Fully Responsive. No horizontal scrollbar. All information is easy to read       |
+| Profile             |    Y          | Fully Responsive. No horizontal scrollbar. Profile information easy to read      |
 
 # Usability Testing
-- A site-wide usability test was conducted. I asked my partner to help participate in the testing. The user was presented with the following aims:
-    - You are an avid jewellery enthusiast. You are interested in buying yourself a new piece of jewellery at a treat, you deserve it!
-    - Navigate to the Home page to see if you would prefer to go stright to the product or check out the blog.
-    - You decide that you would like to know more about jewellery, so you head to the blog. You browse through the blog list and pick a post to read in full.
-    - You decide you would like to set up your own profile page, enter your details for convenience. You register with your email and confirm your registration by following the link sent to you via email. 
-    - You know would like to buy a pair of earrings. You navigate to the 'Earrings' button and decide to check out 'All Earrings'
-    - You have great taste so you decide to buy a pair of the Skew Silver Hoops. 
-    - Now you add the earrings to your bag and head to checkout 
-    - You should now be able to easily enter your shipping details, card details and complete the order. 
-    - The payment went through, you can now review your order on the site and in the email that was sent to your email address, your item is on the way! 
-    - You can now see a breakdown of your Rivercity jewellery purchases on your profile page! 
-
-- User Testing Feedback
-    - I was able to easily checkout a product, received the email and had a read through the blog. 
-    - More work on the buttons for each page would be nice, making all product images the same size would be good as well
+- A site-wide usability test was completed. The user was presented with the following scenario:
+    - You are an avid cyclist. You are interested in buying yourself a new Italian designed road bike as your the one you own is past it's best!
+    - Navigate to the Home page to see if you would prefer to go stright to the bikes or perhaps read some of the cycling blogs first by clicking the 'Blogs' link
+    - You decide that you would like to know more about what bikes are available, so you head to the 'All Bikes' page and browse through the bikes
+    - You decide that you would like to read what previous purchasers think about their bikes, so you head to the 'Reviews' link to navigate to the bike reviews page to read customer reviews
+    - You decide you would like to set up your own profile page and enter your details for convenience. You register by clicking on the 'Register' link and add your email and confirm your registration by following the link sent to you via email 
+    - You now would like to choose which bike you would like to purchase. You navigate to the 'All Bikes' to have a closer look at the available bikes
+    - You decide you want to buy a De Rosa bike so you click on the 'All De Rosa link in the De Rosa dropdown menu
+    - You decide you want to purchase a De Rosa Merak, so you either click on the Merak in the De Rosa dropdown menu, or click on the De Rosa Merak image
+    - You now choose the quantity and add your chosen bike to the cart. You can also keep shopping at this point 
+    - You can now navigate to the shopping cart by clicking on the toast message
+    - You can now click on 'Secure Checkout' to navigate to the payment page. You can also keep shopping and update quantities at this point
+    - You should now be able to easily enter your shipping details, payment details and safely complete your order. 
+    - After your payment has completed successfully, you can now review your order on the site in your profile and in the email that was sent to your email address 
+    - You can now see a breakdown of all your Ciclo Italia purchases on your profile page
 
 # Defensive Design
 
 ## Navbar
-- All links were tested & deemed to be fully functional, directing users to the desired location.
+- All links were tested & deemed to be fully functional, directing users to the desired location
 - Logo redirects the user to the index page
 
 ## Footer
-- Icons navigate to relevant external links when clicked & a new tab is opened for navigating to this page.
+- Icons navigate to relevant external social media links when clicked & a new tab is opened fwhen navigating to these sites
 
 ## Login/Signup
-- Links in these pages functioned correctly
-- Buttons performed desired actions.
-- Required fields in forms rendered an error when not filled correctly.
-- Messages displayed if the information was submitted incorrectly.
+- Links in these pages functioned as expected
+- Buttons performed desired actions
+- Required fields in forms rendered an error as expected when not filled correctly
+- Messages displayed if the information was submitted incorrectly
 
-## Products
-- All links to other pages were checked & deemed rendering correctly.
-- Buttons performed the desired actions.
-- Any forms that needed to be filled out flashed relevant errors if filled incorrectly.
-- Error messages flashed as desired when forms or pages were submitted incorrectly.
+## Bikes
+- All links to other pages were checked & deemed to render as expected
+- Buttons performed the desired actions
+- Any forms that needed to be filled out flashed relevant errors if filled incorrectly
+- Error messages flashed as expected when forms or pages were submitted incorrectly
 
 ## Checkout
-- All links to other pages were checked & deemed rendering correctly.
-- Any forms that needed to be filled out flashed relevant errors if filled incorrectly.
-- Error messages flashed as desired when forms or pages were submitted incorrectly.
+- All links to other pages were checked & deemed to render as expected
+- Any forms that needed to be filled out flashed relevant errors if filled incorrectly
+- Error messages flashed as desired when forms or pages were submitted incorrectly
 
 ## Blog
-- All links to other pages were checked & deemed rendering correctly.
-- Any forms that needed to be filled out flashed relevant errors if filled incorrectly. 
+- All links to other pages were checked & deemed to render as expected
+- Any forms that needed to be filled out flashed relevant errors if filled incorrectly 
 
-![testing](https://media.giphy.com/media/3orieKKmYyvUdR3RkY/giphy.gif)
+## Reviews
+- All links to other pages were checked & deemed to render as expected
+- Any forms that needed to be filled out flashed relevant errors if filled incorrectly
 
-[Back to top](#code-testing)
+[Back to Top](#table-of-contents) 
 
-Back to [README.md](https://github.com/lucyrush/rivercity_jewellery#table-of-contents)
+Back to [README.md](https://github.com/sruss07/MS04-Ciclo-Italia#table-of-contents)
