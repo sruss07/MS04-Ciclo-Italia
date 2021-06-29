@@ -364,6 +364,9 @@ Designed with HTML5, CSS3, JavaScript, Python3 with the Django Framework
 ### Known Issues
 
   - When creating new bike reviews and cycling blogs from within the app admin all details render correctly. However, when creating from within the app itself, titles, text, added by and published time details all render correctly but images do not render correctly. I will endevour to solve this issue in the near future
+  - In Chrome Dev Tools the console returned 3 errors. Errors 1 and 3 relate to the loading of a site.webmanifest file for the site favicon. I have chosen to ignore these errors as they do not affect the performance of the app. Error 2 is a syntax error relating to my doctype. On checking my app the document type is declared correctly and I have run my code through html validation with no errors, so I have chosen to ignore this error as well
+
+![Colour palette](docs/ms4_console_errors.png)
 
 ### Project Barriers and Solutions
 
